@@ -322,6 +322,48 @@ body {
 
 
 
+/* Charts Section */
+.charts-section {
+    background: #efefef;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.charts-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
 /* Table */
 .table-container {
     background: white;

@@ -3,6 +3,13 @@ let currentDirection = 'long';
 
 let charts = {};
 let pairData = {};
+let chartInstances = {
+    chart1: null,
+    chart2: null,
+    chart3: null,
+    chart4: null,
+    chart5: null
+};
 
 
 // Инициализация при загрузке страницы
@@ -747,7 +754,357 @@ function displayResults(params, tableData) {
     // Обновление таблицы
     updateTable(tableData);
     
+    // Создание графиков
+    createCharts(tableData);
+}
 
+// Создание всех графиков
+function createCharts(data) {
+    if (!data || data.length === 0) {
+        return;
+    }
+    
+    // Уничтожаем предыдущие графики
+    Object.values(chartInstances).forEach(chart => {
+        if (chart) {
+            chart.destroy();
+        }
+    });
+    
+    // Chart 1: Position (coin) vs Trigger Number
+    createChart1(data);
+    
+    // Chart 2: Position (coin) vs InPrice
+    createChart2(data);
+    
+    // Chart 3: Position (USDT) vs Trigger Number
+    createChart3(data);
+    
+    // Chart 4: Order Size (USDT) vs Trigger Number
+    createChart4(data);
+    
+    // Chart 5: Order Size (Coin) vs Trigger Number
+    createChart5(data);
+}
+
+// Chart 1: Position (coin) vs Trigger Number
+function createChart1(data) {
+    const ctx = document.getElementById('chart1');
+    if (!ctx) return;
+    
+    const chartData = data.map((row, index) => ({
+        x: index + 1,
+        y: row.position
+    }));
+    
+    chartInstances.chart1 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                label: 'Position (coin)',
+                data: chartData,
+                backgroundColor: '#2ecc71',
+                borderColor: '#2ecc71',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: { display: false },
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Trigger ${context[0].dataIndex + 1}`;
+                        },
+                        label: function(context) {
+                            return `Position: ${context[0].parsed.y.toFixed(4)} coin`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Trigger Number',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Position (coin)',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                }
+            }
+        }
+    });
+}
+
+// Chart 2: Position (coin) vs InPrice
+function createChart2(data) {
+    const ctx = document.getElementById('chart2');
+    if (!ctx) return;
+    
+    const chartData = data.map(row => ({
+        x: row.inPrice,
+        y: row.position
+    })).sort((a, b) => b.x - a.x); // Сортировка по убыванию цены
+    
+    chartInstances.chart2 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                label: 'Position (coin)',
+                data: chartData,
+                backgroundColor: '#2ecc71',
+                borderColor: '#2ecc71',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: { display: false },
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Price: ${context[0].parsed.x.toFixed(4)} USDT`;
+                        },
+                        label: function(context) {
+                            return `Position: ${context[0].parsed.y.toFixed(4)} coin`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'InPrice (USDT)',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Position (coin)',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                }
+            }
+        }
+    });
+}
+
+// Chart 3: Position (USDT) vs Trigger Number
+function createChart3(data) {
+    const ctx = document.getElementById('chart3');
+    if (!ctx) return;
+    
+    const chartData = data.map((row, index) => ({
+        x: index + 1,
+        y: row.position * row.inPrice
+    }));
+    
+    chartInstances.chart3 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                label: 'Position (USDT)',
+                data: chartData,
+                backgroundColor: '#2ecc71',
+                borderColor: '#2ecc71',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: { display: false },
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Trigger ${context[0].dataIndex + 1}`;
+                        },
+                        label: function(context) {
+                            return `Position: ${context[0].parsed.y.toFixed(2)} USDT`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Trigger Number',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Position (USDT)',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                }
+            }
+        }
+    });
+}
+
+// Chart 4: Order Size (USDT) vs Trigger Number
+function createChart4(data) {
+    const ctx = document.getElementById('chart4');
+    if (!ctx) return;
+    
+    const chartData = data.map((row, index) => ({
+        x: index + 1,
+        y: row.orderSize * row.inPrice
+    }));
+    
+    chartInstances.chart4 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                label: 'Order Size (USDT)',
+                data: chartData,
+                backgroundColor: '#2ecc71',
+                borderColor: '#2ecc71',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: { display: false },
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Trigger ${context[0].dataIndex + 1}`;
+                        },
+                        label: function(context) {
+                            return `Order Size: ${context[0].parsed.y.toFixed(2)} USDT`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Trigger Number',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Order Size (USDT)',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                }
+            }
+        }
+    });
+}
+
+// Chart 5: Order Size (Coin) vs Trigger Number
+function createChart5(data) {
+    const ctx = document.getElementById('chart5');
+    if (!ctx) return;
+    
+    const chartData = data.map((row, index) => ({
+        x: index + 1,
+        y: row.orderSize
+    }));
+    
+    chartInstances.chart5 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                label: 'Order Size (Coin)',
+                data: chartData,
+                backgroundColor: '#2ecc71',
+                borderColor: '#2ecc71',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: { display: false },
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Trigger ${context[0].dataIndex + 1}`;
+                        },
+                        label: function(context) {
+                            return `Order Size: ${context[0].parsed.y.toFixed(4)} coin`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Trigger Number',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Order Size (Coin)',
+                        font: { family: 'Inter', size: 12 }
+                    },
+                    ticks: { font: { family: 'Inter', size: 10 } }
+                }
+            }
+        }
+    });
 }
 
 // Расчет примерного триггера ликвидации
