@@ -898,7 +898,10 @@ function createChart2(data) {
                         text: 'InPrice (USDT)',
                         font: { family: 'Inter', size: 12 }
                     },
-                    ticks: { font: { family: 'Inter', size: 10 } }
+                    ticks: { 
+                        font: { family: 'Inter', size: 10 },
+                        reverse: true // Реверс для шкалы InPrice
+                    }
                 },
                 y: {
                     type: 'linear',
