@@ -923,7 +923,8 @@ function createPositionChart(data, direction) {
                         font: {
                             size: 10
                         }
-                    }
+                    },
+                    reverse: true // Цена начинается с последнего Order # (сверху)
                 }
             },
             interaction: {
@@ -976,8 +977,8 @@ function createOrderSizeChart(data, direction) {
             datasets: [{
                 label: 'Order Size',
                 data: chartData,
-                backgroundColor: '#007bff',
-                borderColor: '#007bff',
+                backgroundColor: '#28a745',
+                borderColor: '#28a745',
                 borderWidth: 1
             }]
         },
@@ -1036,8 +1037,7 @@ function createOrderSizeChart(data, direction) {
                         font: {
                             size: 10
                         }
-                    },
-                    reverse: true // Order # от последнего к первому
+                    }
                 }
             },
             interaction: {
