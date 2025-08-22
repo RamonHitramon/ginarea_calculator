@@ -1,0 +1,11 @@
+{
+  "XRPUSDT": { "exchange": "BMEX", "minOrderSize": 1, "minGridStep": 0.0002, "currentPrice": 0.6 },
+  "DOGEUSDT": { "exchange": "BMEX", "minOrderSize": 10, "minGridStep": 0.00002, "currentPrice": 0.08 },
+  "SOLUSDT": { "exchange": "BMEX", "minOrderSize": 0.1, "minGridStep": 0.02, "currentPrice": 100 },
+  "SUIUSDT": { "exchange": "BMEX", "minOrderSize": 0.1, "minGridStep": 0.0002, "currentPrice": 1.2 },
+  "ADAUSDT": { "exchange": "BMEX", "minOrderSize": 10, "minGridStep": 0.0002, "currentPrice": 0.5 },
+  "TONUSDT": { "exchange": "BMEX", "minOrderSize": 1, "minGridStep": 0.0002, "currentPrice": 2.5 },
+  "XBTUSDT": { "exchange": "BMEX", "minOrderSize": 0.0001, "minGridStep": 0.2, "currentPrice": 45000 },
+  "ETHUSDT": { "exchange": "BMEX", "minOrderSize": 0.01, "minGridStep": 0.02, "currentPrice": 3200 },
+  "LTCUSDT": { "exchange": "BMEX", "minOrderSize": 0.1, "minGridStep": 0.02, "currentPrice": 78 }
+}

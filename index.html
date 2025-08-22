@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GinArea Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Левая панель - форма ввода параметров -->
+        <div class="left-panel">
+            <h1>GinArea Calculator</h1>
+            
+            <!-- Exchange -->
+            <div class="form-group">
+                <label for="exchange">Exchange</label>
+                <select id="exchange" onchange="updateExchange()">
+                    <option value="">Выберите биржу</option>
+                    <option value="OKX">OKX (0.05%)</option>
+                    <option value="BYBT">BYBT (0.1%)</option>
+                    <option value="BMEX">BMEX (0.035%)</option>
+                </select>
+            </div>
+
+            <!-- Taker Fee -->
+            <div class="form-group">
+                <label for="takerFee">Taker Fee (%)</label>
+                <input type="number" id="takerFee" value="0.05" step="0.001" min="0">
+            </div>
+
+            <!-- Pair -->
+            <div class="form-group">
+                <label for="pair">Pair</label>
+                <input type="text" id="pair" placeholder="Начните вводить название пары..." list="pairs" oninput="filterPairs()">
+                <datalist id="pairs">
+                    <!-- Опции будут добавлены динамически -->
+                </datalist>
+                <div id="pairInfo">
+                    <!-- Информация о выбранной паре будет отображаться здесь -->
+                </div>
+            </div>
+
+            <!-- Current Price -->
+            <div class="form-group">
+                <label for="currentPrice">Current Price (USDT)</label>
+                <input type="number" id="currentPrice" value="100" step="0.01" min="0">
+            </div>
+
+            <!-- Deposit -->
+            <div class="form-group">
+                <label for="deposit">Deposit (USDT)</label>
+                <input type="number" id="deposit" value="1000" step="1" min="0">
+            </div>
+
+            <!-- Direction -->
+            <div class="form-group">
+                <label>Direction</label>
+                <div class="toggle-group">
+                    <button type="button" class="toggle-btn direction-btn active" data-value="long" onclick="setDirection('long')">Long</button>
+                    <button type="button" class="toggle-btn direction-btn" data-value="short" onclick="setDirection('short')">Short</button>
+                </div>
+            </div>
+
+
+
+            <!-- Trading Range Details -->
+            <div class="section">
+                <h3><strong>Trading Range Details</strong></h3>
+                <div class="form-group">
+                    <label for="gridStepPercent">Grid Step %</label>
+                    <input type="number" id="gridStepPercent" value="0.05" step="0.01" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="gridStepRatio">Grid Step Ratio</label>
+                    <input type="number" id="gridStepRatio" value="1" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="maxTriggerNumber">Max Trigger Number</label>
+                    <input type="number" id="maxTriggerNumber" value="100" step="1" min="1">
+                </div>
+            </div>
+
+            <!-- Order Details -->
+            <div class="section">
+                <h3><strong>Order Details</strong></h3>
+                <div class="form-group">
+                    <label for="orderSize">Order Size (coin)</label>
+                    <input type="number" id="orderSize" value="1" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="maxOrderSize">Max Order Size (coin)</label>
+                    <input type="number" id="maxOrderSize" value="10" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="orderSizeRatio">Order Size Ratio</label>
+                    <input type="number" id="orderSizeRatio" value="1" step="0.1" min="0">
+                </div>
+                <div class="calculated-values">
+                    <div class="calc-item">
+                        <span>Order Size (USDT):</span>
+                        <span id="orderSizeUsdt">0</span>
+                    </div>
+                    <div class="calc-item">
+                        <span>Profit Per Deal:</span>
+                        <span id="profitPerDeal">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profit Settings -->
+            <div class="section">
+                <h3><strong>Profit Settings</strong></h3>
+                <div class="form-group">
+                    <label for="targetDistance">Target Distance (%)</label>
+                    <input type="number" id="targetDistance" value="0.35" step="0.01" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="minStopProfit">Min. Stop Profit (%)</label>
+                    <input type="number" id="minStopProfit" value="0.05" step="0.01" min="0">
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button type="button" class="calculate-btn" onclick="calculate()">Calculate</button>
+        </div>
+
+        <!-- Right panel - table and calculated parameters -->
+        <div class="right-panel">
+            <!-- Table -->
+            <div class="table-container">
+                <h3>Calculation Table</h3>
+                <div class="table-wrapper">
+                    <table id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Order #</th>
+                                <th>InPrice</th>
+                                <th>Grid Step %</th>
+                                <th>Order Size (coin)</th>
+                                <th>Order Size (USDT)</th>
+                                <th>Profit Per Deal</th>
+                                <th>Position (coin)</th>
+                                <th>Position (USDT)</th>
+                                <th>Loss</th>
+                                <th>Avg Price</th>
+                                <th>Liquidation</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Данные будут добавлены через JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Calculated Parameters -->
+            <div class="results-section">
+                <h3>Calculated Parameters</h3>
+                <div class="form-group">
+                    <label>Trading Range</label>
+                    <div class="result-value" id="tradingRange">-</div>
+                </div>
+                <div class="form-group">
+                    <label>Max Position</label>
+                    <div class="result-value" id="maxPosition">-</div>
+                </div>
+                <div class="form-group">
+                    <label>Leverage</label>
+                    <div class="result-value" id="leverage">-</div>
+                </div>
+                <div class="form-group">
+                    <label>Last Price</label>
+                    <div class="result-value" id="lastPrice">-</div>
+                </div>
+                <div class="form-group">
+                    <label>Average Price</label>
+                    <div class="result-value" id="averagePrice">-</div>
+                </div>
+                <div class="form-group">
+                    <label>Liquidation Price</label>
+                    <div class="result-value" id="liquidationPrice">-</div>
+                </div>
+                <div class="form-group">
+                    <label>Game Over Trigger</label>
+                    <div class="result-value" id="gameOverTrigger">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

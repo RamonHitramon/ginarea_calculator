@@ -1,0 +1,77 @@
+{
+  "SOL/USDT": {
+    "minOrderSize": 0.1,
+    "minGridStep": 0.01,
+    "currentPrice": 100.50
+  },
+  "BTC/USDT": {
+    "minOrderSize": 0.001,
+    "minGridStep": 0.1,
+    "currentPrice": 45234.67
+  },
+  "ETH/USDT": {
+    "minOrderSize": 0.01,
+    "minGridStep": 0.1,
+    "currentPrice": 3245.89
+  },
+  "ADA/USDT": {
+    "minOrderSize": 1,
+    "minGridStep": 0.001,
+    "currentPrice": 0.523
+  },
+  "DOT/USDT": {
+    "minOrderSize": 0.1,
+    "minGridStep": 0.01,
+    "currentPrice": 7.45
+  },
+  "BNB/USDT": {
+    "minOrderSize": 0.01,
+    "minGridStep": 0.1,
+    "currentPrice": 312.78
+  },
+  "XRP/USDT": {
+    "minOrderSize": 1,
+    "minGridStep": 0.001,
+    "currentPrice": 0.612
+  },
+  "MATIC/USDT": {
+    "minOrderSize": 1,
+    "minGridStep": 0.001,
+    "currentPrice": 0.834
+  },
+  "LINK/USDT": {
+    "minOrderSize": 0.1,
+    "minGridStep": 0.01,
+    "currentPrice": 15.67
+  },
+  "UNI/USDT": {
+    "minOrderSize": 0.1,
+    "minGridStep": 0.01,
+    "currentPrice": 8.23
+  },
+  "AVAX/USDT": {
+    "minOrderSize": 0.1,
+    "minGridStep": 0.01,
+    "currentPrice": 35.89
+  },
+  "ATOM/USDT": {
+    "minOrderSize": 0.01,
+    "minGridStep": 0.01,
+    "currentPrice": 12.45
+  },
+  "LTC/USDT": {
+    "minOrderSize": 0.01,
+    "minGridStep": 0.01,
+    "currentPrice": 78.34
+  },
+  "BCH/USDT": {
+    "minOrderSize": 0.01,
+    "minGridStep": 0.01,
+    "currentPrice": 245.67
+  },
+  "FIL/USDT": {
+    "minOrderSize": 0.1,
+    "minGridStep": 0.001,
+    "currentPrice": 5.67
+  }
+}

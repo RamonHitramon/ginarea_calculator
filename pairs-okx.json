@@ -1,0 +1,806 @@
+{
+  "BTC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.0001,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "ETH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "XRP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "SOL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "DOGE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "LTC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "ADA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ETHFI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "SUI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "TON-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "CORE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "PEPE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000000.0,
+    "minGridStep": 2e-09,
+    "currentPrice": 0
+  },
+  "MERL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "1INCH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "AAVE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "AEVO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "AGLD-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ALGO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "APE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "APT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "AR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "ARB-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ATOM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "AUCTION-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "AVAX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "AXS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "BCH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "BIGTIME-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BLUR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BNB-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "BONK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100000.0,
+    "minGridStep": 2e-09,
+    "currentPrice": 0
+  },
+  "CELO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "CETUS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "CHZ-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "COMP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "CRV-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "CVC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "DOT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "DYDX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ENS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "ETC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "FIL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "FLOKI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100000.0,
+    "minGridStep": 2e-08,
+    "currentPrice": 0
+  },
+  "GALA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "GMT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "GODS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "GRT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "HBAR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "INJ-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "IOTA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "JOE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "JTO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "JUP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "KSM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "LDO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "LINK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "LPT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "MASK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "MEME-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "MEW-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000.0,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "MKR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "NEAR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "NEO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "OM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "OP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ORDI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "PEOPLE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "PYTH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "RAY-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "RVN-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "SATS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10000000.0,
+    "minGridStep": 0.0,
+    "currentPrice": 0
+  },
+  "SHIB-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100000.0,
+    "minGridStep": 2e-09,
+    "currentPrice": 0
+  },
+  "STORJ-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "STRK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "SUSHI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "THETA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "TIA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "TRB-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "TRX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "TURBO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10000.0,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "UNI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "USTC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "W-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "WIF-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "WLD-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "XCH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "XLM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "XTZ-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "YFI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.0001,
+    "minGridStep": 2.0,
+    "currentPrice": 0
+  },
+  "NOT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "ATH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZRO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "UXLINK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ONDO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "BOME-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000.0,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "DOGS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000.0,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
+  "POPCAT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "NEIROETH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "CAT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100000.0,
+    "minGridStep": 2e-09,
+    "currentPrice": 0
+  },
+  "TAO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "CATI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "POL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "HMSTR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
+  "EIGEN-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "MOODENG-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "NEIRO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000.0,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
+  "GOAT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "GRASS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "PNUT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ACT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "MOVE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "VIRTUAL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "PENGU-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "AI16Z-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "FARTCOIN-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ALCH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BIO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "SONIC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "TRUMP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "S-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "VINE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BERA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "LAYER-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "IP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "PI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "KAITO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "HYPE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "PARTI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "BABY-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "PROMPT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "WCT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10.0,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "HUMA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "SOPH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100.0,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  }
+}
