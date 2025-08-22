@@ -502,6 +502,8 @@ function updateCalculatedValues() {
 
 // Основная функция расчёта
 function calculate() {
+    console.log('Calculate function called');
+    
     // Получение всех параметров
     const params = getParameters();
     
@@ -746,7 +748,9 @@ function displayResults(params, tableData) {
     updateTable(tableData);
     
     // Создание графика позиции против цены
+    console.log('About to create position chart with:', { tableDataLength: tableData.length, direction: params.direction });
     createPositionChart(tableData, params.direction);
+    console.log('Position chart creation completed');
 }
 
 // Расчет примерного триггера ликвидации
@@ -813,7 +817,16 @@ function updateTable(data) {
 
 // Создание графика позиции против цены
 function createPositionChart(data, direction) {
+    console.log('createPositionChart called with:', { data: data.length, direction });
+    
     const ctx = document.getElementById('positionChart');
+    console.log('Canvas element:', ctx);
+    
+    // Проверяем, загружена ли Chart.js
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js is not loaded!');
+        return;
+    }
     
     // Уничтожаем предыдущий график, если он существует
     if (positionChart) {
@@ -821,6 +834,7 @@ function createPositionChart(data, direction) {
     }
     
     if (!data || data.length === 0) {
+        console.log('No data provided for chart');
         return;
     }
     
@@ -830,8 +844,12 @@ function createPositionChart(data, direction) {
         y: row.inPrice   // Цена (ось Y)
     }));
     
+    console.log('Chart data prepared:', chartData);
+    
     // Сортируем данные по позиции (от меньшей к большей)
     chartData.sort((a, b) => a.x - b.x);
+    
+    console.log('Chart data sorted:', chartData);
     
     positionChart = new Chart(ctx, {
         type: 'line',
