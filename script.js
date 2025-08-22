@@ -840,14 +840,14 @@ function createPositionChart(data, direction) {
     
     // Подготавливаем данные для графика
     const chartData = data.map((row, index) => ({
-        x: row.position * row.inPrice, // Position (USDT) (ось X)
+        x: index + 1, // Номер триггера (ось X)
         y: row.inPrice // Цена (ось Y)
     }));
     
     console.log('Chart data prepared:', chartData);
     
-    // Сортируем данные по цене (от последнего триггера к первому)
-    chartData.sort((a, b) => b.y - a.y);
+    // Сортируем данные по номеру триггера (от последнего к первому)
+    chartData.sort((a, b) => b.x - a.x);
     
     console.log('Chart data sorted:', chartData);
     
@@ -879,7 +879,7 @@ function createPositionChart(data, direction) {
                         },
                         label: function(context) {
                             return [
-                                `Position: ${context.parsed.x.toFixed(2)} USDT`,
+                                `Position: ${data[context[0].dataIndex].position.toFixed(4)} coin`,
                                 `Price: ${context.parsed.y.toFixed(4)} USDT`
                             ];
                         }
@@ -892,7 +892,7 @@ function createPositionChart(data, direction) {
                     position: 'bottom',
                     title: {
                         display: true,
-                        text: 'Position (USDT)',
+                        text: 'Trigger Number',
                         font: {
                             size: 12
                         }
@@ -900,7 +900,8 @@ function createPositionChart(data, direction) {
                     ticks: {
                         font: {
                             size: 10
-                        }
+                        },
+                        reverse: true // От последнего триггера к первому
                     }
                 },
                 y: {
