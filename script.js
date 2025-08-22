@@ -839,33 +839,27 @@ function createPositionChart(data, direction) {
     }
     
     // Подготавливаем данные для графика
-    const chartData = data.map(row => ({
-        x: row.position, // Позиция в монетах (ось X)
-        y: row.inPrice   // Цена (ось Y)
+    const chartData = data.map((row, index) => ({
+        x: index + 1, // Номер триггера (ось X)
+        y: row.position // Позиция в монетах (ось Y)
     }));
     
     console.log('Chart data prepared:', chartData);
     
-    // Сортируем данные по позиции (от меньшей к большей)
-    chartData.sort((a, b) => a.x - b.x);
+    // Сортируем данные по номеру триггера (от последнего к первому)
+    chartData.sort((a, b) => b.x - a.x);
     
     console.log('Chart data sorted:', chartData);
     
     positionChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             datasets: [{
-                label: 'Position vs Price',
+                label: 'Position',
                 data: chartData,
-                borderColor: direction === 'long' ? '#28a745' : '#dc3545',
-                backgroundColor: direction === 'long' ? 'rgba(40, 167, 69, 0.1)' : 'rgba(220, 53, 69, 0.1)',
-                borderWidth: 2,
-                fill: false,
-                tension: 0,
-                pointRadius: 4,
-                pointBackgroundColor: direction === 'long' ? '#28a745' : '#dc3545',
-                pointBorderColor: '#fff',
-                pointBorderWidth: 2
+                backgroundColor: '#28a745',
+                borderColor: '#28a745',
+                borderWidth: 1
             }]
         },
         options: {
@@ -884,10 +878,7 @@ function createPositionChart(data, direction) {
                             return `Trigger ${context[0].dataIndex + 1}`;
                         },
                         label: function(context) {
-                            return [
-                                `Position: ${context.parsed.x.toFixed(4)} coin`,
-                                `Price: ${context.parsed.y.toFixed(4)} USDT`
-                            ];
+                            return `Position: ${context.parsed.y.toFixed(4)} coin`;
                         }
                     }
                 }
@@ -896,6 +887,23 @@ function createPositionChart(data, direction) {
                 x: {
                     type: 'linear',
                     position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Trigger Number',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 10
+                        },
+                        reverse: true // От последнего триггера к первому
+                    }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
                     title: {
                         display: true,
                         text: 'Position (coin)',
@@ -908,23 +916,6 @@ function createPositionChart(data, direction) {
                             size: 10
                         }
                     }
-                },
-                y: {
-                    type: 'linear',
-                    position: 'left',
-                    title: {
-                        display: true,
-                        text: 'Price (USDT)',
-                        font: {
-                            size: 12
-                        }
-                    },
-                    ticks: {
-                        font: {
-                            size: 10
-                        }
-                    },
-                    reverse: true // Цена уменьшается сверху вниз
                 }
             },
             interaction: {
