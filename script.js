@@ -840,14 +840,14 @@ function createPositionChart(data, direction) {
     
     // Подготавливаем данные для графика
     const chartData = data.map((row, index) => ({
-        x: index + 1, // Номер триггера (ось X)
-        y: row.position // Позиция в монетах (ось Y)
+        x: row.position * row.inPrice, // Position (USDT) (ось X)
+        y: row.inPrice // Цена (ось Y)
     }));
     
     console.log('Chart data prepared:', chartData);
     
-    // Сортируем данные по номеру триггера (от последнего к первому)
-    chartData.sort((a, b) => b.x - a.x);
+    // Сортируем данные по цене (от последнего триггера к первому)
+    chartData.sort((a, b) => b.y - a.y);
     
     console.log('Chart data sorted:', chartData);
     
@@ -878,7 +878,10 @@ function createPositionChart(data, direction) {
                             return `Trigger ${context[0].dataIndex + 1}`;
                         },
                         label: function(context) {
-                            return `Position: ${context.parsed.y.toFixed(4)} coin`;
+                            return [
+                                `Position: ${context.parsed.x.toFixed(2)} USDT`,
+                                `Price: ${context.parsed.y.toFixed(4)} USDT`
+                            ];
                         }
                     }
                 }
@@ -889,7 +892,7 @@ function createPositionChart(data, direction) {
                     position: 'bottom',
                     title: {
                         display: true,
-                        text: 'Trigger Number',
+                        text: 'Position (USDT)',
                         font: {
                             size: 12
                         }
@@ -897,8 +900,7 @@ function createPositionChart(data, direction) {
                     ticks: {
                         font: {
                             size: 10
-                        },
-                        reverse: true // От последнего триггера к первому
+                        }
                     }
                 },
                 y: {
@@ -906,7 +908,7 @@ function createPositionChart(data, direction) {
                     position: 'left',
                     title: {
                         display: true,
-                        text: 'Position (coin)',
+                        text: 'Price (USDT)',
                         font: {
                             size: 12
                         }
@@ -915,7 +917,8 @@ function createPositionChart(data, direction) {
                         font: {
                             size: 10
                         }
-                    }
+                    },
+                    reverse: true // Цена начинается с последнего триггера (сверху)
                 }
             },
             interaction: {
