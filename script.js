@@ -4,6 +4,7 @@ let currentDirection = 'long';
 let charts = {};
 let pairData = {};
 let positionChart = null;
+let orderSizeChart = null;
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
@@ -751,6 +752,11 @@ function displayResults(params, tableData) {
     console.log('About to create position chart with:', { tableDataLength: tableData.length, direction: params.direction });
     createPositionChart(tableData, params.direction);
     console.log('Position chart creation completed');
+    
+    // Создание графика размера ордера
+    console.log('About to create order size chart with:', { tableDataLength: tableData.length, direction: params.direction });
+    createOrderSizeChart(tableData, params.direction);
+    console.log('Order size chart creation completed');
 }
 
 // Расчет примерного триггера ликвидации
@@ -908,7 +914,7 @@ function createPositionChart(data, direction) {
                     position: 'left',
                     title: {
                         display: true,
-                        text: 'Price (USDT)',
+                        text: 'InPrice (USDT)',
                         font: {
                             size: 12
                         }
@@ -918,6 +924,120 @@ function createPositionChart(data, direction) {
                             size: 10
                         }
                     }
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            }
+        }
+    });
+}
+
+// Создание графика размера ордера
+function createOrderSizeChart(data, direction) {
+    console.log('createOrderSizeChart called with:', { data: data.length, direction });
+    
+    const ctx = document.getElementById('orderSizeChart');
+    console.log('Order Size Canvas element:', ctx);
+    
+    // Проверяем, загружена ли Chart.js
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js is not loaded!');
+        return;
+    }
+    
+    // Уничтожаем предыдущий график, если он существует
+    if (orderSizeChart) {
+        orderSizeChart.destroy();
+    }
+    
+    if (!data || data.length === 0) {
+        console.log('No data provided for order size chart');
+        return;
+    }
+    
+    // Подготавливаем данные для графика
+    const chartData = data.map((row, index) => ({
+        x: row.orderSize, // Order Size (coin) (ось X)
+        y: index + 1 // Order # (ось Y)
+    }));
+    
+    console.log('Order Size chart data prepared:', chartData);
+    
+    // Сортируем данные по номеру ордера (от последнего к первому)
+    chartData.sort((a, b) => b.y - a.y);
+    
+    console.log('Order Size chart data sorted:', chartData);
+    
+    orderSizeChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                label: 'Order Size',
+                data: chartData,
+                backgroundColor: '#007bff',
+                borderColor: '#007bff',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: false
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Order ${context[0].dataIndex + 1}`;
+                        },
+                        label: function(context) {
+                            return [
+                                `Order Size: ${context.parsed.x.toFixed(4)} coin`,
+                                `Order #: ${context.parsed.y}`
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Order Size (coin)',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 10
+                        }
+                    }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Order #',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 10
+                        }
+                    },
+                    reverse: true // Order # от последнего к первому
                 }
             },
             interaction: {
