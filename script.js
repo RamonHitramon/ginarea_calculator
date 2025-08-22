@@ -840,14 +840,14 @@ function createPositionChart(data, direction) {
     
     // Подготавливаем данные для графика
     const chartData = data.map((row, index) => ({
-        x: index + 1, // Номер триггера (ось X)
+        x: row.position * row.inPrice, // Position (USDT) (ось X)
         y: row.inPrice // Цена (ось Y)
     }));
     
     console.log('Chart data prepared:', chartData);
     
-    // Сортируем данные по номеру триггера (от последнего к первому)
-    chartData.sort((a, b) => b.x - a.x);
+    // Сортируем данные по цене (от меньшего к большему)
+    chartData.sort((a, b) => a.y - b.y);
     
     console.log('Chart data sorted:', chartData);
     
@@ -879,7 +879,7 @@ function createPositionChart(data, direction) {
                         },
                         label: function(context) {
                             return [
-                                `Position: ${data[context[0].dataIndex].position.toFixed(4)} coin`,
+                                `Position: ${context.parsed.x.toFixed(2)} USDT`,
                                 `Price: ${context.parsed.y.toFixed(4)} USDT`
                             ];
                         }
@@ -892,7 +892,7 @@ function createPositionChart(data, direction) {
                     position: 'bottom',
                     title: {
                         display: true,
-                        text: 'Trigger Number',
+                        text: 'Position (USDT)',
                         font: {
                             size: 12
                         }
@@ -900,8 +900,7 @@ function createPositionChart(data, direction) {
                     ticks: {
                         font: {
                             size: 10
-                        },
-                        reverse: true // От последнего триггера к первому
+                        }
                     }
                 },
                 y: {
@@ -918,8 +917,7 @@ function createPositionChart(data, direction) {
                         font: {
                             size: 10
                         }
-                    },
-                    reverse: true // Цена начинается с последнего триггера (сверху)
+                    }
                 }
             },
             interaction: {
