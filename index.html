@@ -161,39 +161,38 @@
             <!-- Calculated Parameters -->
             <div class="results-section">
                 <h3>Calculated Parameters</h3>
-                <div class="form-group">
-                    <label>Trading Range</label>
-                    <div class="result-value" id="tradingRange">-</div>
+                <div class="parameters-grid">
+                    <div class="form-group">
+                        <label>Trading Range</label>
+                        <div class="result-value" id="tradingRange">-</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Max Position</label>
+                        <div class="result-value" id="maxPosition">-</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Leverage</label>
+                        <div class="result-value" id="leverage">-</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Price</label>
+                        <div class="result-value" id="lastPrice">-</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Average Price</label>
+                        <div class="result-value" id="averagePrice">-</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Liquidation Price</label>
+                        <div class="result-value" id="liquidationPrice">-</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Game Over Trigger</label>
+                        <div class="result-value" id="gameOverTrigger">-</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Max Position</label>
-                    <div class="result-value" id="maxPosition">-</div>
-                </div>
-                <div class="form-group">
-                    <label>Leverage</label>
-                    <div class="result-value" id="leverage">-</div>
-                </div>
-                <div class="form-group">
-                    <label>Last Price</label>
-                    <div class="result-value" id="lastPrice">-</div>
-                </div>
-                <div class="form-group">
-                    <label>Average Price</label>
-                    <div class="result-value" id="averagePrice">-</div>
-                </div>
-                <div class="form-group">
-                    <label>Liquidation Price</label>
-                    <div class="result-value" id="liquidationPrice">-</div>
-                </div>
-                <div class="form-group">
-                    <label>Game Over Trigger</label>
-                    <div class="result-value" id="gameOverTrigger">-</div>
-                </div>
-            </div>
-
-            <!-- Charts Section -->
-            <div class="charts-section">
-                <h3>Charts</h3>
+                
+                <!-- Charts inside Calculated Parameters -->
                 <div class="charts-grid">
                     <!-- Chart 1: Position (coin) -->
                     <div class="chart-container">
@@ -201,28 +200,22 @@
                         <canvas id="chart1"></canvas>
                     </div>
                     
-                    <!-- Chart 2: Position (coin) - с реверсом для InPrice -->
+                    <!-- Chart 2: Position (USDT) -->
                     <div class="chart-container">
-                        <h4>Position (coin)</h4>
+                        <h4>Position (USDT)</h4>
                         <canvas id="chart2"></canvas>
                     </div>
                     
-                    <!-- Chart 3: Position (USDT) -->
+                    <!-- Chart 3: Order Size (USDT) -->
                     <div class="chart-container">
-                        <h4>Position (USDT)</h4>
+                        <h4>Order Size (USDT)</h4>
                         <canvas id="chart3"></canvas>
                     </div>
                     
-                    <!-- Chart 4: Order Size (USDT) -->
-                    <div class="chart-container">
-                        <h4>Order Size (USDT)</h4>
-                        <canvas id="chart4"></canvas>
-                    </div>
-                    
-                    <!-- Chart 5: Order Size (Coin) -->
+                    <!-- Chart 4: Order Size (Coin) -->
                     <div class="chart-container">
                         <h4>Order Size (Coin)</h4>
-                        <canvas id="chart5"></canvas>
+                        <canvas id="chart4"></canvas>
                     </div>
                 </div>
             </div>
