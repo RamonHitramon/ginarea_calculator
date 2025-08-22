@@ -705,22 +705,22 @@ function displayResults(params, tableData) {
     // Trading Range
     const tradingRangePercent = Math.abs(lastRow.inPrice - params.currentPrice) / params.currentPrice * 100;
     const tradingRangeUsdt = Math.abs(lastRow.inPrice - params.currentPrice);
-    document.getElementById('tradingRange').textContent = 
-        `${tradingRangePercent.toFixed(2)}% (${tradingRangeUsdt.toFixed(2)} USDT)`;
+    document.getElementById('tradingRangePercent').textContent = `${tradingRangePercent.toFixed(2)}%`;
+    document.getElementById('tradingRangeUSDT').textContent = `${tradingRangeUsdt.toFixed(2)} USDT`;
     
     // Max Position
-    document.getElementById('maxPosition').textContent = 
-        `${lastRow.position.toFixed(4)} coin (${lastRow.positionUsdt.toFixed(2)} USDT)`;
+    document.getElementById('maxPositionCoin').textContent = `${lastRow.position.toFixed(4)} coin`;
+    document.getElementById('maxPositionUSDT').textContent = `${lastRow.positionUsdt.toFixed(2)} USDT`;
     
     // Leverage
     const leverage = lastRow.positionUsdt / params.deposit;
     document.getElementById('leverage').textContent = `${leverage.toFixed(2)}x`;
     
-    // Last Price
-    document.getElementById('lastPrice').textContent = `${lastRow.inPrice.toFixed(4)} USDT`;
-    
     // Average Price
     document.getElementById('averagePrice').textContent = `${lastRow.avgPrice.toFixed(4)} USDT`;
+    
+    // Last Price
+    document.getElementById('lastPrice').textContent = `${lastRow.inPrice.toFixed(4)} USDT`;
     
     // Liquidation Price и Game Over Trigger
     let gameOverTrigger = 'Game Over';
