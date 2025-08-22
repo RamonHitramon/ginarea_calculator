@@ -3,6 +3,7 @@ let currentDirection = 'long';
 
 let charts = {};
 let pairData = {};
+let positionChart = null;
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
@@ -743,6 +744,9 @@ function displayResults(params, tableData) {
     
     // Обновление таблицы
     updateTable(tableData);
+    
+    // Создание графика позиции против цены
+    createPositionChart(tableData, params.direction);
 }
 
 // Расчет примерного триггера ликвидации
@@ -804,6 +808,112 @@ function updateTable(data) {
             <td>${row.liquidation > 0 ? row.liquidation.toFixed(4) : '-'}</td>
         `;
         tbody.appendChild(tr);
+    });
+}
+
+// Создание графика позиции против цены
+function createPositionChart(data, direction) {
+    const ctx = document.getElementById('positionChart');
+    
+    // Уничтожаем предыдущий график, если он существует
+    if (positionChart) {
+        positionChart.destroy();
+    }
+    
+    if (!data || data.length === 0) {
+        return;
+    }
+    
+    // Подготавливаем данные для графика
+    const chartData = data.map(row => ({
+        x: row.position, // Позиция в монетах (ось X)
+        y: row.inPrice   // Цена (ось Y)
+    }));
+    
+    // Сортируем данные по позиции (от меньшей к большей)
+    chartData.sort((a, b) => a.x - b.x);
+    
+    positionChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Position vs Price',
+                data: chartData,
+                borderColor: direction === 'long' ? '#28a745' : '#dc3545',
+                backgroundColor: direction === 'long' ? 'rgba(40, 167, 69, 0.1)' : 'rgba(220, 53, 69, 0.1)',
+                borderWidth: 2,
+                fill: false,
+                tension: 0,
+                pointRadius: 4,
+                pointBackgroundColor: direction === 'long' ? '#28a745' : '#dc3545',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: false
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return `Trigger ${context[0].dataIndex + 1}`;
+                        },
+                        label: function(context) {
+                            return [
+                                `Position: ${context.parsed.x.toFixed(4)} coin`,
+                                `Price: ${context.parsed.y.toFixed(4)} USDT`
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Position (coin)',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 10
+                        }
+                    }
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Price (USDT)',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 10
+                        }
+                    },
+                    reverse: true // Цена уменьшается сверху вниз
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            }
+        }
     });
 }
 
