@@ -706,21 +706,31 @@ function updateGridStepVisual() {
     // Вычисляем размеры
     const containerWidth = container.offsetWidth - 80; // Учитываем ось Y
     const containerHeight = container.offsetHeight;
-    const lineHeight = Math.max(2, containerHeight / Math.min(maxTriggerNumber, 50)); // Максимум 50 линий для читаемости
     
     // Создаем линии для каждого триггера
+    let currentYPosition = 10; // Начальная позиция Y
+    
     for (let i = 1; i <= Math.min(maxTriggerNumber, 50); i++) {
+        // Проверяем, не выходим ли за пределы контейнера
+        if (currentYPosition > containerHeight - 30) {
+            break;
+        }
         // Вычисляем Grid Step для текущего триггера
         let currentGridStepPercent = gridStepPercent;
         if (i > 1) {
             currentGridStepPercent = gridStepPercent * Math.pow(gridStepRatio, i - 1);
         }
         
-        // Вычисляем позицию Y (инвертированная - триггер #1 вверху)
-        const yPosition = (Math.min(maxTriggerNumber, 50) - i) * lineHeight;
+        // Вычисляем позицию Y (обычная - триггер #1 внизу)
+        const yPosition = currentYPosition;
         
         // Вычисляем длину линии (пропорционально Grid Step)
         const lineWidth = Math.min(containerWidth * 0.8, (currentGridStepPercent / 0.1) * containerWidth * 0.5);
+        
+        // Вычисляем расстояние до следующего триггера (пропорционально Grid Step)
+        const spacingMultiplier = currentGridStepPercent / gridStepPercent; // Множитель расстояния
+        const baseSpacing = 20; // Базовое расстояние между линиями
+        const currentSpacing = baseSpacing * spacingMultiplier;
         
         // Вычисляем InPrice
         let inPrice = currentPrice;
@@ -761,6 +771,9 @@ function updateGridStepVisual() {
             yLabel.textContent = i;
             yAxis.appendChild(yLabel);
         }
+        
+        // Обновляем позицию Y для следующего триггера
+        currentYPosition += currentSpacing;
     }
     
     // Добавляем сетку по X

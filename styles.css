@@ -571,7 +571,7 @@ tr:hover {
 }
 
 .grid-step-chart {
-    background: #efefef;
+    background: white;
     border-radius: 8px;
     padding: 20px;
     min-height: 400px;
@@ -637,9 +637,6 @@ tr:hover {
     width: 60px;
     background: rgba(255, 255, 255, 0.8);
     border-right: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 10px 5px;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
