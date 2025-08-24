@@ -26,10 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePairList(exchange);
     }
     
-    // Инициализируем Grid Step Visual
-    setTimeout(() => {
-        updateGridStepVisual();
-    }, 100);
+
 });
 
 // Загрузка данных о парах
@@ -579,11 +576,7 @@ function setupEventListeners() {
         document.getElementById(id).addEventListener('input', updateCalculatedValues);
     });
     
-    // Обновление Grid Step Visual при изменении параметров сетки
-    const gridInputs = ['gridStepPercent', 'gridStepRatio', 'maxTriggerNumber'];
-    gridInputs.forEach(id => {
-        document.getElementById(id).addEventListener('input', updateGridStepVisual);
-    });
+
     
     // Обновление при выборе пары
     document.getElementById('pair').addEventListener('input', function() {
@@ -619,7 +612,6 @@ function updateExchange() {
     document.getElementById('pairInfo').innerHTML = '';
     
     updateCalculatedValues();
-    updateGridStepVisual();
 }
 
 // Установка направления (Long/Short)
@@ -634,7 +626,6 @@ function setDirection(direction) {
     
     // Обновляем расчеты при смене направления
     updateCalculatedValues();
-    updateGridStepVisual();
 }
 
 
@@ -673,12 +664,86 @@ function updateCalculatedValues() {
     }
     
     document.getElementById('profitPerDeal').textContent = profitPerDeal.toFixed(3) + ' USDT';
-    
-    // Обновляем Grid Step Visual
-    updateGridStepVisual();
 }
 
-// Обновление Grid Step Visual
+// Обновление Grid Step Visual с данными из таблицы
+function updateGridStepVisualWithTableData(tableData) {
+    const container = document.getElementById('gridStepVisual');
+    if (!container || !tableData || tableData.length === 0) return;
+    
+    // Очищаем контейнер
+    container.innerHTML = '';
+    
+    // Создаем ось Y
+    const yAxis = document.createElement('div');
+    yAxis.className = 'grid-step-y-axis';
+    container.appendChild(yAxis);
+    
+    // Вычисляем размеры
+    const containerWidth = container.offsetWidth - 80; // Учитываем ось Y
+    const containerHeight = container.offsetHeight;
+    
+    // Создаем линии для каждого триггера из таблицы
+    let currentYPosition = 10; // Начальная позиция Y
+    const maxLines = Math.min(tableData.length, 500); // Максимум 500 линий
+    
+    for (let i = 0; i < maxLines; i++) {
+        const row = tableData[i];
+        const triggerNumber = i + 1;
+        
+        // Проверяем, не выходим ли за пределы контейнера
+        if (currentYPosition > containerHeight - 30) {
+            break;
+        }
+        
+        // Получаем данные из таблицы
+        const inPrice = row.inPrice;
+        const gridStepPercent = row.gridStepPercent;
+        
+        // Вычисляем длину линии (пропорционально Grid Step)
+        const lineWidth = Math.min(containerWidth * 0.8, (gridStepPercent / 0.1) * containerWidth * 0.5);
+        
+        // Вычисляем расстояние до следующего триггера (пропорционально Grid Step)
+        const spacingMultiplier = gridStepPercent / tableData[0].gridStepPercent; // Множитель расстояния
+        const baseSpacing = 15; // Базовое расстояние между линиями
+        const currentSpacing = baseSpacing * spacingMultiplier;
+        
+        // Создаем линию
+        const line = document.createElement('div');
+        line.className = 'grid-step-line';
+        line.style.top = `${currentYPosition}px`;
+        line.style.left = `${80}px`; // Отступ от оси Y
+        line.style.width = `${lineWidth}px`;
+        
+        // Добавляем подписи
+        const triggerLabel = document.createElement('span');
+        triggerLabel.className = 'grid-step-label';
+        triggerLabel.textContent = `#${triggerNumber}`;
+        line.appendChild(triggerLabel);
+        
+        const priceLabel = document.createElement('span');
+        priceLabel.className = 'grid-step-label';
+        priceLabel.textContent = `${inPrice.toFixed(2)}`;
+        line.appendChild(priceLabel);
+        
+        container.appendChild(line);
+        
+        // Добавляем подпись на оси Y
+        if (triggerNumber === 1 || triggerNumber === maxLines || triggerNumber % 50 === 0) {
+            const yLabel = document.createElement('div');
+            yLabel.className = 'grid-step-y-label';
+            yLabel.style.position = 'absolute';
+            yLabel.style.top = `${currentYPosition + 5}px`;
+            yLabel.textContent = triggerNumber;
+            yAxis.appendChild(yLabel);
+        }
+        
+        // Обновляем позицию Y для следующего триггера
+        currentYPosition += currentSpacing;
+    }
+}
+
+// Обновление Grid Step Visual (старая функция - оставляем для совместимости)
 function updateGridStepVisual() {
     const container = document.getElementById('gridStepVisual');
     if (!container) return;
@@ -698,10 +763,7 @@ function updateGridStepVisual() {
     yAxis.className = 'grid-step-y-axis';
     container.appendChild(yAxis);
     
-    // Создаем сетку
-    const grid = document.createElement('div');
-    grid.className = 'grid-step-grid';
-    container.appendChild(grid);
+
     
     // Вычисляем размеры
     const containerWidth = container.offsetWidth - 80; // Учитываем ось Y
@@ -776,13 +838,7 @@ function updateGridStepVisual() {
         currentYPosition += currentSpacing;
     }
     
-    // Добавляем сетку по X
-    for (let i = 0; i <= 10; i++) {
-        const gridLine = document.createElement('div');
-        gridLine.className = 'grid-step-grid-line';
-        gridLine.style.top = `${(i * containerHeight / 10)}px`;
-        grid.appendChild(gridLine);
-    }
+
 }
 
 // Основная функция расчёта
@@ -802,6 +858,9 @@ function calculate() {
     
     // Отображение результатов
     displayResults(params, tableData);
+    
+    // Обновляем Grid Step Visual с данными из таблицы
+    updateGridStepVisualWithTableData(tableData);
 }
 
 // Получение информации о паре из соответствующего объекта биржи
