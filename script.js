@@ -2,7 +2,10 @@
 let currentDirection = 'long';
 
 let charts = {};
-let pairData = {};
+let pairData = {}; // Общий объект для всех пар
+let bybtPairs = {}; // Отдельный объект для BYBT пар
+let okxPairs = {}; // Отдельный объект для OKX пар
+let bmexPairs = {}; // Отдельный объект для BMEX пар
 let chartInstances = {
     chart1: null,
     chart2: null,
@@ -16,6 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPairData();
     updateCalculatedValues();
     setupEventListeners();
+    
+    // Инициализируем список пар для первой биржи (если выбрана)
+    const exchange = document.getElementById('exchange').value;
+    if (exchange) {
+        updatePairList(exchange);
+    }
 });
 
 // Загрузка данных о парах
@@ -30,11 +39,49 @@ async function loadPairData() {
             fetch('pairs-bmex.json')
         ]);
         
-        pairData = {};
+        // Инициализируем отдельные объекты для каждой биржи
+        bybtPairs = {};
+        okxPairs = {};
+        bmexPairs = {};
+        
+        // Загружаем данные из CSV файла и распределяем по биржам
+        try {
+            const csvResponse = await fetch('GA Pairs.csv');
+            if (csvResponse.ok) {
+                const csvText = await csvResponse.text();
+                const csvData = parseCSVData(csvText);
+                
+                // Распределяем данные по биржам
+                Object.keys(csvData).forEach(pair => {
+                    const exchange = csvData[pair].exchange;
+                    if (exchange === 'BYBT') {
+                        bybtPairs[pair] = csvData[pair];
+                    } else if (exchange === 'OKX') {
+                        okxPairs[pair] = csvData[pair];
+                    } else if (exchange === 'BMEX') {
+                        bmexPairs[pair] = csvData[pair];
+                    }
+                });
+                
+                console.log(`Загружено из CSV: BYBT=${Object.keys(bybtPairs).length}, OKX=${Object.keys(okxPairs).length}, BMEX=${Object.keys(bmexPairs).length}`);
+            }
+        } catch (csvError) {
+            console.log('Ошибка загрузки CSV файла:', csvError);
+        }
+        
+        // Загружаем данные из JSON файлов и перезаписываем соответствующие биржи
         
         if (okxResponse.status === 'fulfilled' && okxResponse.value.ok) {
             const okxData = await okxResponse.value.json();
-            Object.assign(pairData, okxData);
+            console.log('OKX Raw data loaded:', Object.keys(okxData).length, 'pairs');
+            console.log('OKX first 10 pairs:', Object.keys(okxData).slice(0, 10));
+            
+            // Проверяем, есть ли BTC пары
+            const btcPairs = Object.keys(okxData).filter(pair => pair.includes('BTC'));
+            console.log('OKX BTC pairs found:', btcPairs);
+            
+            // Перезаписываем OKX пары
+            okxPairs = okxData;
             console.log(`Загружено ${Object.keys(okxData).length} пар OKX`);
             console.log('Первые 5 пар OKX:', Object.keys(okxData).slice(0, 5));
         } else {
@@ -43,7 +90,15 @@ async function loadPairData() {
         
         if (bybtResponse.status === 'fulfilled' && bybtResponse.value.ok) {
             const bybtData = await bybtResponse.value.json();
-            Object.assign(pairData, bybtData);
+            console.log('BYBT Raw data loaded:', Object.keys(bybtData).length, 'pairs');
+            console.log('BYBT first 10 pairs:', Object.keys(bybtData).slice(0, 10));
+            
+            // Проверяем, есть ли ETH пары
+            const ethPairs = Object.keys(bybtData).filter(pair => pair.includes('ETH'));
+            console.log('BYBT ETH pairs found:', ethPairs);
+            
+            // Перезаписываем BYBT пары
+            bybtPairs = bybtData;
             console.log(`Загружено ${Object.keys(bybtData).length} пар BYBT`);
         } else {
             console.log('Ошибка загрузки BYBT:', bybtResponse.status, bybtResponse.reason);
@@ -51,32 +106,70 @@ async function loadPairData() {
         
         if (bmexResponse.status === 'fulfilled' && bmexResponse.value.ok) {
             const bmexData = await bmexResponse.value.json();
-            Object.assign(pairData, bmexData);
+            
+            // Перезаписываем BMEX пары
+            bmexPairs = bmexData;
             console.log(`Загружено ${Object.keys(bmexData).length} пар BMEX`);
         } else {
             console.log('Ошибка загрузки BMEX:', bmexResponse.status, bmexResponse.reason);
         }
         
         // Если не удалось загрузить файлы, используем встроенные данные
-        if (Object.keys(pairData).length === 0) {
+        if (Object.keys(bybtPairs).length === 0 && Object.keys(okxPairs).length === 0 && Object.keys(bmexPairs).length === 0) {
             console.log('Не удалось загрузить файлы пар, используем встроенные данные');
-            pairData = getBuiltInPairData();
+            const builtInData = getBuiltInPairData();
+            
+            // Распределяем встроенные данные по биржам
+            Object.keys(builtInData).forEach(pair => {
+                const exchange = builtInData[pair].exchange;
+                if (exchange === 'BYBT') {
+                    bybtPairs[pair] = builtInData[pair];
+                } else if (exchange === 'OKX') {
+                    okxPairs[pair] = builtInData[pair];
+                } else if (exchange === 'BMEX') {
+                    bmexPairs[pair] = builtInData[pair];
+                }
+            });
         }
         
-        console.log(`Итого загружено ${Object.keys(pairData).length} пар`);
+        console.log(`Итого загружено: BYBT=${Object.keys(bybtPairs).length}, OKX=${Object.keys(okxPairs).length}, BMEX=${Object.keys(bmexPairs).length} пар`);
         
         // Проверяем наличие конкретных пар
         console.log('Проверка пар OKX:');
-        const okxPairs = Object.keys(pairData).filter(pair => pairData[pair].exchange === 'OKX');
-        console.log('OKX пары:', okxPairs.slice(0, 10), '... всего:', okxPairs.length);
-        console.log('GOAT-USDT-SWAP есть:', pairData['GOAT-USDT-SWAP']);
+        console.log('OKX пары:', Object.keys(okxPairs).slice(0, 10), '... всего:', Object.keys(okxPairs).length);
+        console.log('GOAT-USDT-SWAP есть:', okxPairs['GOAT-USDT-SWAP']);
+        
+        console.log('Проверка пар BYBT:');
+        console.log('BYBT пары:', Object.keys(bybtPairs).slice(0, 10), '... всего:', Object.keys(bybtPairs).length);
+        console.log('ETHUSDT есть:', bybtPairs['ETHUSDT']);
+        
+        // Проверяем все ETH пары в итоговых данных
+        const allEthPairs = [...Object.keys(bybtPairs), ...Object.keys(okxPairs), ...Object.keys(bmexPairs)].filter(pair => pair.includes('ETH'));
+        console.log('Все ETH пары в итоговых данных:', allEthPairs);
+        
+        // Проверяем, есть ли ETHUSDT в данных
+        console.log('ETHUSDT в BYBT:', 'ETHUSDT' in bybtPairs);
+        console.log('ETHUSDT в OKX:', 'ETHUSDT' in okxPairs);
+        console.log('ETHUSDT в BMEX:', 'ETHUSDT' in bmexPairs);
         
     } catch (error) {
         console.log('Ошибка загрузки файлов пар, используем встроенные данные:', error);
-        pairData = getBuiltInPairData();
+        const builtInData = getBuiltInPairData();
+        
+        // Распределяем встроенные данные по биржам
+        Object.keys(builtInData).forEach(pair => {
+            const exchange = builtInData[pair].exchange;
+            if (exchange === 'BYBT') {
+                bybtPairs[pair] = builtInData[pair];
+            } else if (exchange === 'OKX') {
+                okxPairs[pair] = builtInData[pair];
+            } else if (exchange === 'BMEX') {
+                bmexPairs[pair] = builtInData[pair];
+            }
+        });
     }
     
-    console.log('Итоговые данные пар:', pairData);
+    console.log('Итоговые данные пар загружены');
     updatePairList();
 }
 
@@ -152,21 +245,39 @@ function parseCSVData(csvText) {
     return pairs;
 }
 
-// Парсинг размера ордера из строки типа "0.001 BTC" или "10 DOGE"
+// Парсинг размера ордера из строки типа "0.001 BTC", "10 DOGE", "1 USD", "BUY: 7 USDT / SELL: 0.00008 BTC"
 function parseOrderSize(orderSizeStr) {
+    // Для SPOT пар с форматом "BUY: 7 USDT / SELL: 0.00008 BTC"
+    if (orderSizeStr.includes('BUY:')) {
+        const buyMatch = orderSizeStr.match(/BUY:\s*([\d.]+)\s+USDT/);
+        if (buyMatch) {
+            return parseFloat(buyMatch[1]);
+        }
+    }
+    
+    // Для обычных форматов "0.001 BTC", "1 USD"
     const match = orderSizeStr.match(/^([\d.]+)\s+/);
     if (match) {
         return parseFloat(match[1]);
     }
+    
     return null;
 }
 
-// Парсинг шага сетки из строки типа "0.0002 USDT"
+// Парсинг шага сетки из строки типа "0.0002 USDT", "0.2 USD"
 function parseGridStep(gridStepStr) {
-    const match = gridStepStr.match(/^([\d.]+)\s+USDT/);
-    if (match) {
-        return parseFloat(match[1]);
+    // Для USDT
+    const usdtMatch = gridStepStr.match(/^([\d.]+)\s+USDT/);
+    if (usdtMatch) {
+        return parseFloat(usdtMatch[1]);
     }
+    
+    // Для USD
+    const usdMatch = gridStepStr.match(/^([\d.]+)\s+USD/);
+    if (usdMatch) {
+        return parseFloat(usdMatch[1]);
+    }
+    
     return null;
 }
 
@@ -329,10 +440,15 @@ function updatePairList(selectedExchange = null) {
         return;
     }
     
-    // Фильтруем пары для выбранной биржи
-    const exchangePairs = Object.keys(pairData).filter(pair => 
-        pairData[pair].exchange === selectedExchange
-    );
+    // Выбираем соответствующий объект биржи
+    let exchangePairs = [];
+    if (selectedExchange === 'BYBT') {
+        exchangePairs = Object.keys(bybtPairs);
+    } else if (selectedExchange === 'OKX') {
+        exchangePairs = Object.keys(okxPairs);
+    } else if (selectedExchange === 'BMEX') {
+        exchangePairs = Object.keys(bmexPairs);
+    }
     
     // Добавляем все пары в datalist для автозаполнения
     exchangePairs.forEach(pair => {
@@ -342,6 +458,13 @@ function updatePairList(selectedExchange = null) {
     });
     
     console.log(`Добавлено ${exchangePairs.length} пар для ${selectedExchange} в автозаполнение`);
+    console.log(`Первые 10 пар ${selectedExchange}:`, exchangePairs.slice(0, 10));
+    
+    // Проверяем конкретные пары
+    if (selectedExchange === 'BYBT') {
+        console.log('ETHUSDT в списке BYBT:', exchangePairs.includes('ETHUSDT'));
+        console.log('BTCUSDT в списке BYBT:', exchangePairs.includes('BTCUSDT'));
+    }
 }
 
 // Фильтрация пар при вводе
@@ -353,10 +476,15 @@ function filterPairs() {
     console.log('Фильтрация пар:', inputValue, 'для биржи:', exchange);
     
     if (inputValue.length > 0 && exchange) {
-        // Фильтруем пары для выбранной биржи
-        const exchangePairs = Object.keys(pairData).filter(pair => 
-            pairData[pair].exchange === exchange
-        );
+        // Выбираем соответствующий объект биржи
+        let exchangePairs = [];
+        if (exchange === 'BYBT') {
+            exchangePairs = Object.keys(bybtPairs);
+        } else if (exchange === 'OKX') {
+            exchangePairs = Object.keys(okxPairs);
+        } else if (exchange === 'BMEX') {
+            exchangePairs = Object.keys(bmexPairs);
+        }
         
         // Показываем подходящие пары
         const matchingPairs = exchangePairs.filter(pair => 
@@ -364,21 +492,40 @@ function filterPairs() {
         );
         
         console.log('Найдено пар:', matchingPairs.length, matchingPairs.slice(0, 5));
+        console.log('Все пары BYBT:', Object.keys(bybtPairs));
+        console.log('ETHUSDT в BYBT:', 'ETHUSDT' in bybtPairs);
+        console.log('ETHUSDT в списке BYBT пар:', Object.keys(bybtPairs).includes('ETHUSDT'));
         
         if (matchingPairs.length > 0) {
             updatePairInfo();
+        } else {
+            // Если не найдено точных совпадений, попробуем найти по началу названия
+            const fullPairName = getFullPairName(inputValue, exchange);
+            if (fullPairName) {
+                updatePairInfo();
+            }
         }
     }
 }
 
 // Обновление информации о выбранной паре
 function updatePairInfo() {
-    const pair = document.getElementById('pair').value;
+    const pairInput = document.getElementById('pair').value;
     const exchange = document.getElementById('exchange').value;
-    const pairInfo = pairData[pair];
     
-    console.log('updatePairInfo вызвана:', pair, 'для биржи:', exchange);
-    console.log('pairData содержит пару:', pairData[pair]);
+    console.log('updatePairInfo вызвана:', pairInput, 'для биржи:', exchange);
+    
+    // Ищем полное название пары, которое соответствует вводу пользователя
+    const fullPairName = getFullPairName(pairInput, exchange);
+    
+    // Получаем информацию о паре из соответствующего объекта биржи
+    const pairInfo = fullPairName ? getPairInfo(fullPairName, exchange) : null;
+    
+    if (fullPairName) {
+        console.log('Найдена полная пара:', fullPairName);
+    }
+    
+    console.log('pairData содержит пару:', pairInfo);
     
     if (pairInfo && pairInfo.exchange === exchange) {
         // Отображаем информацию о паре в интерфейсе
@@ -422,7 +569,7 @@ function updatePairInfo() {
 // Настройка обработчиков событий
 function setupEventListeners() {
     // Обновление рассчитанных значений при изменении параметров
-    const inputs = ['orderSize', 'maxOrderSize', 'orderSizeRatio', 'targetDistance', 'minStopProfit', 'currentPrice'];
+    const inputs = ['orderSize', 'maxOrderSize', 'orderSizeRatio', 'targetDistance', 'minStopProfit', 'currentPrice', 'takerFee'];
     inputs.forEach(id => {
         document.getElementById(id).addEventListener('input', updateCalculatedValues);
     });
@@ -472,6 +619,9 @@ function setDirection(direction) {
         btn.classList.remove('active');
     });
     document.querySelector(`[data-value="${direction}"]`).classList.add('active');
+    
+    // Обновляем расчеты при смене направления
+    updateCalculatedValues();
 }
 
 
@@ -480,30 +630,36 @@ function setDirection(direction) {
 function updateCalculatedValues() {
     const orderSize = parseFloat(document.getElementById('orderSize').value) || 0;
     const currentPrice = parseFloat(document.getElementById('currentPrice').value) || 100;
-    const targetDistance = parseFloat(document.getElementById('targetDistance').value) || 0;
-    const minStopProfit = parseFloat(document.getElementById('minStopProfit').value) || 0;
+    const targetDistanceValue = document.getElementById('targetDistance').value;
+    const targetDistance = targetDistanceValue === '' ? 0 : parseFloat(targetDistanceValue) || 0;
+    const minStopProfitValue = document.getElementById('minStopProfit').value;
+    const minStopProfit = minStopProfitValue === '' ? 0 : parseFloat(minStopProfitValue) || 0;
     
     // Order Size в USDT
     const orderSizeUsdt = orderSize * currentPrice;
     document.getElementById('orderSizeUsdt').textContent = orderSizeUsdt.toFixed(2) + ' USDT';
     
     // Profit Per Deal
-    if (targetDistance > 0 && minStopProfit > 0) {
+    let profitPerDeal = 0;
+    if (targetDistance > 0) {
         const takerFee = parseFloat(document.getElementById('takerFee').value) / 100;
-        let profitPerDeal = 0;
         
         if (currentDirection === 'long') {
+            // Новая формула для Long
             const closePrice = currentPrice * (1 + targetDistance / 100 - minStopProfit / 100);
-            profitPerDeal = (closePrice - currentPrice) * orderSize - (orderSizeUsdt * takerFee);
+            const profitFromPrice = orderSize * (closePrice - currentPrice);
+            const feeCost = orderSize * closePrice * takerFee;
+            profitPerDeal = profitFromPrice - feeCost;
         } else {
+            // Новая формула для Short
             const closePrice = currentPrice * (1 - targetDistance / 100 + minStopProfit / 100);
-            profitPerDeal = (currentPrice - closePrice) * orderSize - (orderSizeUsdt * takerFee);
+            const profitFromPrice = orderSize * (currentPrice - closePrice);
+            const feeCost = orderSize * closePrice * takerFee;
+            profitPerDeal = profitFromPrice - feeCost;
         }
-        
-        document.getElementById('profitPerDeal').textContent = profitPerDeal.toFixed(2) + ' USDT';
-    } else {
-        document.getElementById('profitPerDeal').textContent = '0 USDT';
     }
+    
+    document.getElementById('profitPerDeal').textContent = profitPerDeal.toFixed(3) + ' USDT';
 }
 
 // Основная функция расчёта
@@ -525,12 +681,52 @@ function calculate() {
     displayResults(params, tableData);
 }
 
+// Получение информации о паре из соответствующего объекта биржи
+function getPairInfo(pairName, exchange) {
+    if (!pairName || !exchange) return null;
+    
+    if (exchange === 'BYBT') {
+        return bybtPairs[pairName];
+    } else if (exchange === 'OKX') {
+        return okxPairs[pairName];
+    } else if (exchange === 'BMEX') {
+        return bmexPairs[pairName];
+    }
+    
+    return null;
+}
+
+// Получение полного названия пары по вводу пользователя
+function getFullPairName(pairInput, exchange) {
+    if (!pairInput || !exchange) return null;
+    
+    // Выбираем соответствующий объект биржи
+    let exchangePairs = {};
+    if (exchange === 'BYBT') {
+        exchangePairs = bybtPairs;
+    } else if (exchange === 'OKX') {
+        exchangePairs = okxPairs;
+    } else if (exchange === 'BMEX') {
+        exchangePairs = bmexPairs;
+    }
+    
+    const matchingPairs = Object.keys(exchangePairs).filter(pair => 
+        pair.toLowerCase().startsWith(pairInput.toLowerCase())
+    );
+    
+    return matchingPairs.length > 0 ? matchingPairs[0] : null;
+}
+
 // Получение параметров из формы
 function getParameters() {
+    const pairInput = document.getElementById('pair').value;
+    const exchange = document.getElementById('exchange').value;
+    const fullPairName = getFullPairName(pairInput, exchange);
+    
     return {
-        exchange: document.getElementById('exchange').value,
+        exchange: exchange,
         takerFee: parseFloat(document.getElementById('takerFee').value) / 100,
-        pair: document.getElementById('pair').value,
+        pair: fullPairName || pairInput, // Используем полное название пары
         deposit: parseFloat(document.getElementById('deposit').value),
         direction: currentDirection,
 
@@ -540,8 +736,8 @@ function getParameters() {
         orderSize: parseFloat(document.getElementById('orderSize').value),
         maxOrderSize: parseFloat(document.getElementById('maxOrderSize').value),
         orderSizeRatio: parseFloat(document.getElementById('orderSizeRatio').value),
-        targetDistance: parseFloat(document.getElementById('targetDistance').value),
-        minStopProfit: parseFloat(document.getElementById('minStopProfit').value),
+        targetDistance: document.getElementById('targetDistance').value === '' ? 0 : parseFloat(document.getElementById('targetDistance').value) || 0,
+        minStopProfit: document.getElementById('minStopProfit').value === '' ? 0 : parseFloat(document.getElementById('minStopProfit').value) || 0,
         currentPrice: parseFloat(document.getElementById('currentPrice').value) || 100
     };
 }
@@ -562,16 +758,27 @@ function validateParameters(params) {
     }
     
     // Проверка на Min Order Size
-    const minOrderSize = pairData[params.pair]?.minOrderSize || 0.1;
+    const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
     if (params.orderSize < minOrderSize) {
         alert(`Order Size (${params.orderSize}) не может быть меньше Min Order Size (${minOrderSize}) для выбранной пары`);
         return false;
     }
     
     // Проверка на кратность Min Order Size
-    if (params.orderSize % minOrderSize !== 0) {
+    const remainder = params.orderSize % minOrderSize;
+    const tolerance = 1e-10; // Допуск для ошибок округления с плавающей точкой
+    if (Math.abs(remainder) > tolerance && Math.abs(remainder - minOrderSize) > tolerance) {
         alert(`Order Size (${params.orderSize}) должен быть кратен Min Order Size (${minOrderSize}) для выбранной пары`);
         return false;
+    }
+    
+    // Проверка Max Order Size на кратность Min Order Size (если указан)
+    if (params.maxOrderSize && params.maxOrderSize > 0) {
+        const maxRemainder = params.maxOrderSize % minOrderSize;
+        if (Math.abs(maxRemainder) > tolerance && Math.abs(maxRemainder - minOrderSize) > tolerance) {
+            alert(`Max Order Size (${params.maxOrderSize}) должен быть кратен Min Order Size (${minOrderSize}) для выбранной пары`);
+            return false;
+        }
     }
     
     return true;
@@ -610,7 +817,7 @@ function calculateTable(params) {
         // Order Size (coin) - расчет согласно алгоритму
         if (i > 1) {
             const previousRawSize = rawSize; // Используем предыдущий rawSize
-            const minOrderSize = pairData[params.pair]?.minOrderSize || 0.1;
+            const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
             
             // Order Size cal: просто умножаем на множитель без округления
             const orderSizeRatio = (params.orderSizeRatio === "" || params.orderSizeRatio < 1) ? 1 : params.orderSizeRatio;
@@ -627,7 +834,9 @@ function calculateTable(params) {
                 roundedSize = Math.floor(rawSize / minOrderSize) * minOrderSize;
             } else {
                 // Если rawSize больше или равен Max Order Size - использовать Max Order Size
-                roundedSize = params.maxOrderSize;
+                // Но также убеждаемся, что Max Order Size кратен Min Order Size
+                const maxOrderSizeRounded = Math.floor(params.maxOrderSize / minOrderSize) * minOrderSize;
+                roundedSize = maxOrderSizeRounded;
             }
             
             currentOrderSize = roundedSize;
@@ -640,15 +849,21 @@ function calculateTable(params) {
         
         // Profit Per Deal
         let profitPerDeal = 0;
-        if (params.targetDistance > 0 && params.minStopProfit > 0) {
+        if (params.targetDistance > 0) {
             let closePrice;
             if (params.direction === 'long') {
                 closePrice = currentPrice * (1 + params.targetDistance / 100 - params.minStopProfit / 100);
-                profitPerDeal = (closePrice - currentPrice) * currentOrderSize - (orderSizeUsdt * params.takerFee);
+                const profitFromPrice = currentOrderSize * (closePrice - currentPrice);
+                const feeCost = currentOrderSize * closePrice * params.takerFee;
+                profitPerDeal = profitFromPrice - feeCost;
             } else {
                 closePrice = currentPrice * (1 - params.targetDistance / 100 + params.minStopProfit / 100);
-                profitPerDeal = (currentPrice - closePrice) * currentOrderSize - (orderSizeUsdt * params.takerFee);
+                const profitFromPrice = currentOrderSize * (currentPrice - closePrice);
+                const feeCost = currentOrderSize * closePrice * params.takerFee;
+                profitPerDeal = profitFromPrice - feeCost;
             }
+            
+
         }
         
         // Position (coin)
@@ -1092,7 +1307,7 @@ function updateTable(data) {
             <td>${row.gridStepPercent.toFixed(2)}%</td>
             <td>${row.orderSize.toFixed(4)}</td>
             <td>${row.orderSizeUsdt.toFixed(2)}</td>
-            <td>${row.profitPerDeal.toFixed(2)}</td>
+            <td>${row.profitPerDeal.toFixed(3)}</td>
             <td>${row.position.toFixed(4)}</td>
             <td>${row.positionUsdt.toFixed(2)}</td>
             <td>${row.loss.toFixed(2)}</td>
