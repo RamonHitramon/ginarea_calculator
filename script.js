@@ -169,7 +169,7 @@ async function loadPairData() {
         });
     }
     
-    console.log('Итоговые данные пар загружены');
+    console.log('Итоговые данные пар загружены - GitHub Pages Update');
     updatePairList();
 }
 
