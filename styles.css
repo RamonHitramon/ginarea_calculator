@@ -574,8 +574,8 @@ tr:hover {
     background: white;
     border-radius: 8px;
     padding: 20px;
-    min-height: 800px;
-    max-height: 1200px;
+    min-height: 1200px;
+    max-height: 2000px;
     position: relative;
     overflow: hidden;
 }
@@ -606,6 +606,8 @@ tr:hover {
     border-radius: 4px;
     font-weight: 500;
     white-space: nowrap;
+    font-size: 10px;
+    color: #999;
 }
 
 

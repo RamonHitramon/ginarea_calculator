@@ -679,13 +679,34 @@ function updateGridStepVisualWithTableData(tableData) {
     yAxis.className = 'grid-step-y-axis';
     container.appendChild(yAxis);
     
+    // Создаем шкалу Grid Step %
+    const xAxis = document.createElement('div');
+    xAxis.className = 'grid-step-x-axis';
+    xAxis.style.position = 'absolute';
+    xAxis.style.bottom = '0';
+    xAxis.style.left = '80px';
+    xAxis.style.right = '20px';
+    xAxis.style.height = '30px';
+    xAxis.style.borderTop = '1px solid #ddd';
+    xAxis.style.fontFamily = "'Inter', sans-serif";
+    xAxis.style.fontSize = '11px';
+    xAxis.style.color = '#666';
+    xAxis.style.display = 'flex';
+    xAxis.style.alignItems = 'center';
+    xAxis.style.justifyContent = 'space-between';
+    xAxis.style.paddingTop = '5px';
+    container.appendChild(xAxis);
+    
     // Вычисляем размеры
-    const containerWidth = container.offsetWidth - 80; // Учитываем ось Y
-    const containerHeight = container.offsetHeight;
+    const containerWidth = container.offsetWidth - 100; // Учитываем оси
+    const containerHeight = container.offsetHeight - 40; // Учитываем шкалу
     
     // Создаем линии для каждого триггера из таблицы
     let currentYPosition = 10; // Начальная позиция Y
     const maxLines = Math.min(tableData.length, 500); // Максимум 500 линий
+    
+    // Находим максимальный Grid Step для масштабирования
+    const maxGridStep = Math.max(...tableData.map(row => row.gridStepPercent));
     
     for (let i = 0; i < maxLines; i++) {
         const row = tableData[i];
@@ -701,11 +722,11 @@ function updateGridStepVisualWithTableData(tableData) {
         const gridStepPercent = row.gridStepPercent;
         
         // Вычисляем длину линии (пропорционально Grid Step)
-        const lineWidth = Math.min(containerWidth * 0.8, (gridStepPercent / 0.1) * containerWidth * 0.5);
+        const lineWidth = Math.min(containerWidth * 0.8, (gridStepPercent / maxGridStep) * containerWidth * 0.8);
         
         // Вычисляем расстояние до следующего триггера (пропорционально Grid Step)
         const spacingMultiplier = gridStepPercent / tableData[0].gridStepPercent; // Множитель расстояния
-        const baseSpacing = 15; // Базовое расстояние между линиями
+        const baseSpacing = 8; // Уменьшенное базовое расстояние между линиями
         const currentSpacing = baseSpacing * spacingMultiplier;
         
         // Создаем линию
@@ -714,26 +735,42 @@ function updateGridStepVisualWithTableData(tableData) {
         line.style.top = `${currentYPosition}px`;
         line.style.left = `${80}px`; // Отступ от оси Y
         line.style.width = `${lineWidth}px`;
+        line.style.position = 'absolute';
+        line.style.height = '2px';
+        line.style.background = '#2ecc71';
+        line.style.borderRadius = '1px';
         
-        // Добавляем подписи
-        const triggerLabel = document.createElement('span');
+        // Добавляем номер триггера слева от оси Y
+        const triggerLabel = document.createElement('div');
         triggerLabel.className = 'grid-step-label';
+        triggerLabel.style.position = 'absolute';
+        triggerLabel.style.left = '5px';
+        triggerLabel.style.top = `${currentYPosition - 5}px`;
+        triggerLabel.style.fontSize = '9px';
+        triggerLabel.style.color = '#999';
         triggerLabel.textContent = `#${triggerNumber}`;
-        line.appendChild(triggerLabel);
+        yAxis.appendChild(triggerLabel);
         
-        const priceLabel = document.createElement('span');
+        // Добавляем InPrice на конце линии
+        const priceLabel = document.createElement('div');
         priceLabel.className = 'grid-step-label';
+        priceLabel.style.position = 'absolute';
+        priceLabel.style.left = `${80 + lineWidth + 5}px`;
+        priceLabel.style.top = `${currentYPosition - 5}px`;
+        priceLabel.style.fontSize = '9px';
+        priceLabel.style.color = '#999';
         priceLabel.textContent = `${inPrice.toFixed(2)}`;
-        line.appendChild(priceLabel);
+        container.appendChild(priceLabel);
         
         container.appendChild(line);
         
-        // Добавляем подпись на оси Y
-        if (triggerNumber === 1 || triggerNumber === maxLines || triggerNumber % 50 === 0) {
+        // Добавляем подпись на оси Y (только для ключевых точек)
+        if (triggerNumber === 1 || triggerNumber === maxLines || triggerNumber % 100 === 0) {
             const yLabel = document.createElement('div');
             yLabel.className = 'grid-step-y-label';
             yLabel.style.position = 'absolute';
             yLabel.style.top = `${currentYPosition + 5}px`;
+            yLabel.style.left = '35px';
             yLabel.textContent = triggerNumber;
             yAxis.appendChild(yLabel);
         }
@@ -741,6 +778,16 @@ function updateGridStepVisualWithTableData(tableData) {
         // Обновляем позицию Y для следующего триггера
         currentYPosition += currentSpacing;
     }
+    
+    // Добавляем подписи на шкале X
+    const xLabels = ['0%', '25%', '50%', '75%', '100%'];
+    xLabels.forEach((label, index) => {
+        const xLabel = document.createElement('div');
+        xLabel.textContent = label;
+        xLabel.style.position = 'absolute';
+        xLabel.style.left = `${(index / 4) * containerWidth * 0.8}px`;
+        xAxis.appendChild(xLabel);
+    });
 }
 
 // Обновление Grid Step Visual (старая функция - оставляем для совместимости)
