@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (exchange) {
         updatePairList(exchange);
     }
+    
+    // Инициализируем Grid Step Visual
+    setTimeout(() => {
+        updateGridStepVisual();
+    }, 100);
 });
 
 // Загрузка данных о парах
@@ -574,6 +579,12 @@ function setupEventListeners() {
         document.getElementById(id).addEventListener('input', updateCalculatedValues);
     });
     
+    // Обновление Grid Step Visual при изменении параметров сетки
+    const gridInputs = ['gridStepPercent', 'gridStepRatio', 'maxTriggerNumber'];
+    gridInputs.forEach(id => {
+        document.getElementById(id).addEventListener('input', updateGridStepVisual);
+    });
+    
     // Обновление при выборе пары
     document.getElementById('pair').addEventListener('input', function() {
         updateCalculatedValues();
@@ -608,6 +619,7 @@ function updateExchange() {
     document.getElementById('pairInfo').innerHTML = '';
     
     updateCalculatedValues();
+    updateGridStepVisual();
 }
 
 // Установка направления (Long/Short)
@@ -622,6 +634,7 @@ function setDirection(direction) {
     
     // Обновляем расчеты при смене направления
     updateCalculatedValues();
+    updateGridStepVisual();
 }
 
 
@@ -660,6 +673,103 @@ function updateCalculatedValues() {
     }
     
     document.getElementById('profitPerDeal').textContent = profitPerDeal.toFixed(3) + ' USDT';
+    
+    // Обновляем Grid Step Visual
+    updateGridStepVisual();
+}
+
+// Обновление Grid Step Visual
+function updateGridStepVisual() {
+    const container = document.getElementById('gridStepVisual');
+    if (!container) return;
+    
+    // Очищаем контейнер
+    container.innerHTML = '';
+    
+    // Получаем параметры
+    const currentPrice = parseFloat(document.getElementById('currentPrice').value) || 100;
+    const gridStepPercent = parseFloat(document.getElementById('gridStepPercent').value) || 0.05;
+    const gridStepRatio = parseFloat(document.getElementById('gridStepRatio').value) || 1;
+    const maxTriggerNumber = parseInt(document.getElementById('maxTriggerNumber').value) || 100;
+    const direction = currentDirection;
+    
+    // Создаем ось Y
+    const yAxis = document.createElement('div');
+    yAxis.className = 'grid-step-y-axis';
+    container.appendChild(yAxis);
+    
+    // Создаем сетку
+    const grid = document.createElement('div');
+    grid.className = 'grid-step-grid';
+    container.appendChild(grid);
+    
+    // Вычисляем размеры
+    const containerWidth = container.offsetWidth - 80; // Учитываем ось Y
+    const containerHeight = container.offsetHeight;
+    const lineHeight = Math.max(2, containerHeight / Math.min(maxTriggerNumber, 50)); // Максимум 50 линий для читаемости
+    
+    // Создаем линии для каждого триггера
+    for (let i = 1; i <= Math.min(maxTriggerNumber, 50); i++) {
+        // Вычисляем Grid Step для текущего триггера
+        let currentGridStepPercent = gridStepPercent;
+        if (i > 1) {
+            currentGridStepPercent = gridStepPercent * Math.pow(gridStepRatio, i - 1);
+        }
+        
+        // Вычисляем позицию Y (инвертированная - триггер #1 вверху)
+        const yPosition = (Math.min(maxTriggerNumber, 50) - i) * lineHeight;
+        
+        // Вычисляем длину линии (пропорционально Grid Step)
+        const lineWidth = Math.min(containerWidth * 0.8, (currentGridStepPercent / 0.1) * containerWidth * 0.5);
+        
+        // Вычисляем InPrice
+        let inPrice = currentPrice;
+        if (i > 1) {
+            if (direction === 'long') {
+                inPrice = currentPrice * Math.pow(1 - currentGridStepPercent / 100, i - 1);
+            } else {
+                inPrice = currentPrice * Math.pow(1 + currentGridStepPercent / 100, i - 1);
+            }
+        }
+        
+        // Создаем линию
+        const line = document.createElement('div');
+        line.className = 'grid-step-line';
+        line.style.top = `${yPosition + 10}px`;
+        line.style.left = `${80}px`; // Отступ от оси Y
+        line.style.width = `${lineWidth}px`;
+        
+        // Добавляем подписи
+        const triggerLabel = document.createElement('span');
+        triggerLabel.className = 'grid-step-label';
+        triggerLabel.textContent = `#${i}`;
+        line.appendChild(triggerLabel);
+        
+        const priceLabel = document.createElement('span');
+        priceLabel.className = 'grid-step-label';
+        priceLabel.textContent = `${inPrice.toFixed(2)}`;
+        line.appendChild(priceLabel);
+        
+        container.appendChild(line);
+        
+        // Добавляем подпись на оси Y
+        if (i === 1 || i === Math.min(maxTriggerNumber, 50) || i % 10 === 0) {
+            const yLabel = document.createElement('div');
+            yLabel.className = 'grid-step-y-label';
+            yLabel.style.position = 'absolute';
+            yLabel.style.top = `${yPosition + 5}px`;
+            yLabel.textContent = i;
+            yAxis.appendChild(yLabel);
+        }
+    }
+    
+    // Добавляем сетку по X
+    for (let i = 0; i <= 10; i++) {
+        const gridLine = document.createElement('div');
+        gridLine.className = 'grid-step-grid-line';
+        gridLine.style.top = `${(i * containerHeight / 10)}px`;
+        grid.appendChild(gridLine);
+    }
 }
 
 // Основная функция расчёта
