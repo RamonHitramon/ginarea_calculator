@@ -574,8 +574,8 @@ tr:hover {
     background: white;
     border-radius: 8px;
     padding: 20px;
-    min-height: 1200px;
-    max-height: 2000px;
+    min-height: 2000px;
+    max-height: 3000px;
     position: relative;
     overflow: hidden;
 }
