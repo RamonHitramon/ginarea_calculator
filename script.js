@@ -1249,7 +1249,7 @@ function displayResults(params, tableData) {
     
     // Liquidation Price и Game Over Trigger
     let gameOverTrigger = 'Game Over';
-    let liquidationPrice = lastRow.liquidation.toFixed(4) + ' USDT';
+    let liquidationPrice = lastRow.liquidation > 0 ? lastRow.liquidation.toFixed(4) + ' USDT' : '-';
     
     // Проверяем ликвидацию в указанном диапазоне
     for (let i = 0; i < tableData.length; i++) {
@@ -1267,9 +1267,14 @@ function displayResults(params, tableData) {
     
     // Если ликвидация не произошла в указанном диапазоне, рассчитываем примерный триггер
     if (gameOverTrigger === 'Game Over') {
-        const estimatedTrigger = calculateEstimatedLiquidationTrigger(params, lastRow);
-        gameOverTrigger = `~${estimatedTrigger}`;
-        liquidationPrice = `${lastRow.liquidation.toFixed(4)} USDT`;
+        if (lastRow.liquidation > 0) {
+            const estimatedTrigger = calculateEstimatedLiquidationTrigger(params, lastRow);
+            gameOverTrigger = `~${estimatedTrigger}`;
+            liquidationPrice = `${lastRow.liquidation.toFixed(4)} USDT`;
+        } else {
+            gameOverTrigger = '-';
+            liquidationPrice = '-';
+        }
     }
     
     document.getElementById('liquidationPrice').textContent = liquidationPrice;
