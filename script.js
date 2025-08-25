@@ -1224,11 +1224,11 @@ function displayResults(params, tableData) {
     updateTable(tableData);
     
     // Создание графиков
-    createCharts(tableData);
+    createCharts(tableData, params);
 }
 
 // Создание всех графиков
-function createCharts(data) {
+function createCharts(data, params) {
     if (!data || data.length === 0) {
         return;
     }
@@ -1244,7 +1244,7 @@ function createCharts(data) {
     createChart1(data);
     
     // Chart 2: Position (USDT) vs Trigger Number
-    createChart2(data);
+    createChart2(data, params);
     
     // Chart 3: Order Size (USDT) vs Trigger Number
     createChart3(data);
@@ -1318,14 +1318,30 @@ function createChart1(data) {
 }
 
 // Chart 2: Position (USDT) vs Trigger Number
-function createChart2(data) {
+function createChart2(data, params) {
     const ctx = document.getElementById('chart2');
     if (!ctx) return;
     
-    const chartData = data.map((row, index) => ({
-        x: index + 1,
-        y: row.positionUsdt
-    }));
+    // Получаем Deposit из параметров
+    const deposit = params.deposit || 100;
+    
+    const chartData = data.map((row, index) => {
+        const positionUsdt = row.positionUsdt;
+        let backgroundColor = '#2ecc71'; // Зеленый по умолчанию
+        
+        // Определяем цвет в зависимости от риска
+        if (positionUsdt > deposit * 3) {
+            backgroundColor = '#e74c3c'; // Красный - критический риск (3x Deposit)
+        } else if (positionUsdt > deposit) {
+            backgroundColor = '#f39c12'; // Желтый - высокий риск (1x-3x Deposit)
+        }
+        
+        return {
+            x: index + 1,
+            y: positionUsdt,
+            backgroundColor: backgroundColor
+        };
+    });
     
     chartInstances.chart2 = new Chart(ctx, {
         type: 'bar',
@@ -1333,8 +1349,8 @@ function createChart2(data) {
             datasets: [{
                 label: 'Position (USDT)',
                 data: chartData,
-                backgroundColor: '#2ecc71',
-                borderColor: '#2ecc71',
+                backgroundColor: chartData.map(item => item.backgroundColor),
+                borderColor: chartData.map(item => item.backgroundColor),
                 borderWidth: 1
             }]
         },
