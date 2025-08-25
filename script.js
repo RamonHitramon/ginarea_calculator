@@ -874,6 +874,52 @@ function calculate() {
     }
 }
 
+// Функции для модального окна "Автору на кофе"
+function showCoffeeModal() {
+    const modal = document.getElementById('coffeeModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Блокируем прокрутку страницы
+}
+
+function closeCoffeeModal() {
+    const modal = document.getElementById('coffeeModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Возвращаем прокрутку страницы
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Показываем уведомление об успешном копировании
+        const button = event.target;
+        const originalText = button.textContent;
+        button.textContent = 'Скопировано!';
+        button.style.background = '#28a745';
+        
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '#667eea';
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Ошибка при копировании: ', err);
+        alert('Не удалось скопировать адрес. Попробуйте скопировать вручную.');
+    });
+}
+
+// Закрытие модального окна при клике вне его
+window.onclick = function(event) {
+    const modal = document.getElementById('coffeeModal');
+    if (event.target === modal) {
+        closeCoffeeModal();
+    }
+}
+
+// Закрытие модального окна по клавише Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeCoffeeModal();
+    }
+});
+
 // Получение информации о паре из соответствующего объекта биржи
 function getPairInfo(pairName, exchange) {
     if (!pairName || !exchange) return null;
