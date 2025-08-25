@@ -1324,16 +1324,23 @@ function createChart2(data, params) {
     
     // Получаем Deposit из параметров
     const deposit = params.deposit || 100;
+    console.log('Deposit for chart:', deposit);
     
     const chartData = data.map((row, index) => {
         const positionUsdt = row.positionUsdt;
         let backgroundColor = '#2ecc71'; // Зеленый по умолчанию
         
+        console.log(`Trigger ${index + 1}: Position=${positionUsdt}, Deposit=${deposit}, Ratio=${positionUsdt/deposit}`);
+        
         // Определяем цвет в зависимости от риска
         if (positionUsdt > deposit * 3) {
             backgroundColor = '#e74c3c'; // Красный - критический риск (3x Deposit)
+            console.log(`Trigger ${index + 1}: RED (critical risk)`);
         } else if (positionUsdt > deposit) {
             backgroundColor = '#f39c12'; // Желтый - высокий риск (1x-3x Deposit)
+            console.log(`Trigger ${index + 1}: YELLOW (high risk)`);
+        } else {
+            console.log(`Trigger ${index + 1}: GREEN (safe)`);
         }
         
         return {
