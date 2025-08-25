@@ -1324,7 +1324,7 @@ function createChart2(data) {
     
     const chartData = data.map((row, index) => ({
         x: index + 1,
-        y: row.position * row.inPrice
+        y: row.positionUsdt
     }));
     
     chartInstances.chart2 = new Chart(ctx, {
