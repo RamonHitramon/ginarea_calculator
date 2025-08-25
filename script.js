@@ -985,8 +985,10 @@ function calculateTable(params) {
         
         // Проверяем Order Size для первого ордера
         if (i === 1) {
-            if (currentOrderSize < minOrderSize) {
-                currentOrderSize = minOrderSize;
+            // Order Size не может быть меньше заданного пользователем И не меньше Min Order Size
+            const minAllowedSize = Math.max(params.orderSize, minOrderSize);
+            if (currentOrderSize < minAllowedSize) {
+                currentOrderSize = minAllowedSize;
             }
         }
         
@@ -1024,9 +1026,10 @@ function calculateTable(params) {
                 roundedSize = maxOrderSizeRounded;
             }
             
-            // Проверяем, что Order Size не меньше Min Order Size
-            if (roundedSize < minOrderSize) {
-                currentOrderSize = minOrderSize;
+            // Order Size не может быть меньше заданного пользователем И не меньше Min Order Size
+            const minAllowedSize = Math.max(params.orderSize, minOrderSize);
+            if (roundedSize < minAllowedSize) {
+                currentOrderSize = minAllowedSize;
             } else {
                 currentOrderSize = roundedSize;
             }
