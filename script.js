@@ -679,7 +679,7 @@ function updateGridStepVisualWithTableData(tableData) {
     xAxis.className = 'grid-step-x-axis';
     xAxis.style.position = 'absolute';
     xAxis.style.bottom = '0';
-    xAxis.style.left = '20px';
+    xAxis.style.left = '70px';
     xAxis.style.right = '20px';
     xAxis.style.height = '30px';
     xAxis.style.borderTop = '1px solid #ddd';
@@ -693,7 +693,7 @@ function updateGridStepVisualWithTableData(tableData) {
     container.appendChild(xAxis);
     
     // Вычисляем размеры
-    const containerWidth = container.offsetWidth - 40; // Учитываем отступы
+    const containerWidth = container.offsetWidth - 90; // Учитываем отступы и ось Y
     const containerHeight = container.offsetHeight - 40; // Учитываем шкалу
     
     // Используем все триггеры из таблицы (Max Trigger Number)
@@ -729,7 +729,7 @@ function updateGridStepVisualWithTableData(tableData) {
         const line = document.createElement('div');
         line.className = 'grid-step-line';
         line.style.top = `${currentYPosition}px`;
-        line.style.left = `${20}px`; // Отступ от левого края
+        line.style.left = `${70}px`; // Отступ от оси Y
         line.style.width = `${lineWidth}px`;
         line.style.position = 'absolute';
         line.style.height = `${lineThickness}px`;
@@ -739,13 +739,56 @@ function updateGridStepVisualWithTableData(tableData) {
         container.appendChild(line);
     }
     
-    // Добавляем подписи на шкале X (0% до 10%)
-    const xLabels = ['0%', '2.5%', '5%', '7.5%', '10%'];
+    // Создаем ось Y с обозначениями
+    const yAxis = document.createElement('div');
+    yAxis.style.position = 'absolute';
+    yAxis.style.left = '0';
+    yAxis.style.top = '0';
+    yAxis.style.bottom = '40px'; // Учитываем шкалу X
+    yAxis.style.width = '60px';
+    yAxis.style.borderRight = '1px solid #ddd';
+    yAxis.style.fontFamily = "'Inter', sans-serif";
+    yAxis.style.fontSize = '9px';
+    yAxis.style.color = '#666';
+    yAxis.style.paddingRight = '5px';
+    container.appendChild(yAxis);
+    
+    // Добавляем обозначения на ось Y (каждые 10 триггеров)
+    const yStep = Math.max(1, Math.floor(maxLines / 10));
+    for (let i = 0; i <= maxLines; i += yStep) {
+        if (i === 0) continue; // Пропускаем 0
+        
+        const yPosition = 10 + (i * lineSpacing);
+        if (yPosition > containerHeight - 40) break;
+        
+        const yLabel = document.createElement('div');
+        yLabel.textContent = i;
+        yLabel.style.position = 'absolute';
+        yLabel.style.top = `${yPosition - 5}px`;
+        yLabel.style.right = '5px';
+        yLabel.style.fontSize = '8px';
+        yLabel.style.color = '#999';
+        yAxis.appendChild(yLabel);
+    }
+    
+    // Добавляем подписи на шкале X с реальными значениями Grid Step %
+    const maxGridStepForScale = Math.max(...tableData.map(row => row.gridStepPercent));
+    const minGridStepForScale = Math.min(...tableData.map(row => row.gridStepPercent));
+    
+    // Создаем 5 равномерных делений на основе реальных данных
+    const xLabels = [];
+    for (let i = 0; i <= 4; i++) {
+        const gridStepValue = minGridStepForScale + (maxGridStepForScale - minGridStepForScale) * (i / 4);
+        xLabels.push(gridStepValue.toFixed(3) + '%');
+    }
+    
     xLabels.forEach((label, index) => {
         const xLabel = document.createElement('div');
         xLabel.textContent = label;
         xLabel.style.position = 'absolute';
         xLabel.style.left = `${(index / 4) * containerWidth * 0.9}px`;
+        xLabel.style.fontSize = '10px';
+        xLabel.style.color = '#666';
         xAxis.appendChild(xLabel);
     });
 }
