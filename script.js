@@ -948,17 +948,10 @@ function validateParameters(params) {
         return false;
     }
     
-    // Проверка на кратность Min Order Size
-    const remainder = params.orderSize % minOrderSize;
-    const tolerance = 1e-10; // Допуск для ошибок округления с плавающей точкой
-    if (Math.abs(remainder) > tolerance && Math.abs(remainder - minOrderSize) > tolerance) {
-        alert(`Order Size (${params.orderSize}) должен быть кратен Min Order Size (${minOrderSize}) для выбранной пары`);
-        return false;
-    }
-    
     // Проверка Max Order Size на кратность Min Order Size (если указан)
     if (params.maxOrderSize && params.maxOrderSize > 0) {
         const maxRemainder = params.maxOrderSize % minOrderSize;
+        const tolerance = 1e-10; // Допуск для ошибок округления с плавающей точкой
         if (Math.abs(maxRemainder) > tolerance && Math.abs(maxRemainder - minOrderSize) > tolerance) {
             alert(`Max Order Size (${params.maxOrderSize}) должен быть кратен Min Order Size (${minOrderSize}) для выбранной пары`);
             return false;
