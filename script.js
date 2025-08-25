@@ -983,6 +983,13 @@ function calculateTable(params) {
             }
         }
         
+        // Проверяем Order Size для первого ордера
+        if (i === 1) {
+            if (currentOrderSize < minOrderSize) {
+                currentOrderSize = minOrderSize;
+            }
+        }
+        
         // Grid Step %
         if (i > 1) {
             const oldGridStep = currentGridStep;
@@ -992,9 +999,10 @@ function calculateTable(params) {
         }
         
         // Order Size (coin) - расчет согласно алгоритму
+        const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
+        
         if (i > 1) {
             const previousRawSize = rawSize; // Используем предыдущий rawSize
-            const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
             
             // Order Size cal: просто умножаем на множитель без округления
             const orderSizeRatio = (params.orderSizeRatio === "" || params.orderSizeRatio < 1) ? 1 : params.orderSizeRatio;
@@ -1016,7 +1024,12 @@ function calculateTable(params) {
                 roundedSize = maxOrderSizeRounded;
             }
             
-            currentOrderSize = roundedSize;
+            // Проверяем, что Order Size не меньше Min Order Size
+            if (roundedSize < minOrderSize) {
+                currentOrderSize = minOrderSize;
+            } else {
+                currentOrderSize = roundedSize;
+            }
             
 
         }
