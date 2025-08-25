@@ -1018,7 +1018,7 @@ function getParameters() {
         direction: currentDirection,
 
         gridStepPercent: parseFloat(document.getElementById('gridStepPercent').value),
-        gridStepRatio: parseFloat(document.getElementById('gridStepRatio').value),
+        gridStepRatio: parseFloat(document.getElementById('gridStepRatio').value) || 1,
         maxTriggerNumber: parseInt(document.getElementById('maxTriggerNumber').value),
         orderSize: parseFloat(document.getElementById('orderSize').value),
         maxOrderSize: document.getElementById('maxOrderSize').value === '' ? null : parseFloat(document.getElementById('maxOrderSize').value),
@@ -1046,6 +1046,13 @@ function validateParameters(params) {
     if (params.maxTriggerNumber <= 0) {
         console.log('Max Trigger Number validation failed:', params.maxTriggerNumber);
         alert('Max Trigger Number должен быть больше 0');
+        return false;
+    }
+    
+    // Проверка Grid Step Ratio
+    if (params.gridStepRatio < 1) {
+        console.log('Grid Step Ratio validation failed:', params.gridStepRatio);
+        alert('Grid Step Ratio не может быть меньше 1');
         return false;
     }
     
