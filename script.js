@@ -849,11 +849,15 @@ function calculate() {
     
     // Получение всех параметров
     const params = getParameters();
+    console.log('Parameters:', params);
     
     // Проверка валидности параметров
     if (!validateParameters(params)) {
+        console.log('Validation failed');
         return;
     }
+    
+    console.log('Validation passed, calculating table...');
     
     // Расчёт таблицы
     const tableData = calculateTable(params);
@@ -928,22 +932,29 @@ function getParameters() {
 
 // Валидация параметров
 function validateParameters(params) {
+    console.log('Validating parameters:', params);
+    
     if (params.deposit <= 0) {
+        console.log('Deposit validation failed:', params.deposit);
         alert('Deposit должен быть больше 0');
         return false;
     }
     if (params.orderSize <= 0) {
+        console.log('Order Size validation failed:', params.orderSize);
         alert('Order Size должен быть больше 0');
         return false;
     }
     if (params.maxTriggerNumber <= 0) {
+        console.log('Max Trigger Number validation failed:', params.maxTriggerNumber);
         alert('Max Trigger Number должен быть больше 0');
         return false;
     }
     
     // Проверка на Min Order Size
     const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
+    console.log('Min Order Size check:', { pair: params.pair, exchange: params.exchange, minOrderSize, orderSize: params.orderSize });
     if (params.orderSize < minOrderSize) {
+        console.log('Min Order Size validation failed');
         alert(`Order Size (${params.orderSize}) не может быть меньше Min Order Size (${minOrderSize}) для выбранной пары`);
         return false;
     }
