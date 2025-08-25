@@ -666,7 +666,7 @@ function updateCalculatedValues() {
     document.getElementById('profitPerDeal').textContent = profitPerDeal.toFixed(3) + ' USDT';
 }
 
-// Обновление Grid Step Visual с данными из таблицы
+// Обновление Grid Step Visual с данными из таблицы (функция сохранена, но визуализация скрыта)
 function updateGridStepVisualWithTableData(tableData) {
     const container = document.getElementById('gridStepVisual');
     if (!container || !tableData || tableData.length === 0) return;
