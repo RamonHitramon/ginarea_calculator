@@ -845,7 +845,8 @@ function updateGridStepVisual() {
 
 // Основная функция расчёта
 function calculate() {
-    console.log('Calculate function called');
+    try {
+        console.log('Calculate function called');
     
     // Получение всех параметров
     const params = getParameters();
@@ -867,6 +868,10 @@ function calculate() {
     
     // Обновляем Grid Step Visual с данными из таблицы
     updateGridStepVisualWithTableData(tableData);
+    } catch (error) {
+        console.error('Error in calculate function:', error);
+        alert('Произошла ошибка при расчете. Попробуйте еще раз.');
+    }
 }
 
 // Получение информации о паре из соответствующего объекта биржи
