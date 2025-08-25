@@ -918,7 +918,7 @@ function getParameters() {
         gridStepRatio: parseFloat(document.getElementById('gridStepRatio').value),
         maxTriggerNumber: parseInt(document.getElementById('maxTriggerNumber').value),
         orderSize: parseFloat(document.getElementById('orderSize').value),
-        maxOrderSize: parseFloat(document.getElementById('maxOrderSize').value),
+        maxOrderSize: document.getElementById('maxOrderSize').value === '' ? null : parseFloat(document.getElementById('maxOrderSize').value),
         orderSizeRatio: parseFloat(document.getElementById('orderSizeRatio').value),
         targetDistance: document.getElementById('targetDistance').value === '' ? 0 : parseFloat(document.getElementById('targetDistance').value) || 0,
         minStopProfit: document.getElementById('minStopProfit').value === '' ? 0 : parseFloat(document.getElementById('minStopProfit').value) || 0,
@@ -949,7 +949,7 @@ function validateParameters(params) {
     }
     
     // Проверка Max Order Size должен быть больше или равен Order Size (если указан)
-    if (params.maxOrderSize && params.maxOrderSize > 0) {
+    if (params.maxOrderSize !== null && params.maxOrderSize > 0) {
         if (params.maxOrderSize < params.orderSize) {
             alert(`Max Order Size (${params.maxOrderSize}) должен быть больше или равен Order Size (${params.orderSize})`);
             return false;
@@ -999,7 +999,6 @@ function calculateTable(params) {
         }
         
         // Order Size (coin) - расчет согласно алгоритму
-        const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
         
         if (i > 1) {
             const previousRawSize = rawSize; // Используем предыдущий rawSize
@@ -1011,7 +1010,7 @@ function calculateTable(params) {
             
             // Order Size: округляем вниз до ближайшего кратного Min Order Size
             let roundedSize;
-            if (!params.maxOrderSize || params.maxOrderSize === "") {
+            if (params.maxOrderSize === null || params.maxOrderSize === "") {
                 // Если Max Order Size пустой - округлить вниз до кратного Min Order Size
                 roundedSize = Math.floor(rawSize / minOrderSize) * minOrderSize;
             } else if (rawSize < params.maxOrderSize) {
