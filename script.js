@@ -985,6 +985,9 @@ function calculateTable(params) {
     let totalPosition = 0;
     let totalCost = 0;
     
+    // Получаем Min Order Size для пары
+    const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
+    
     for (let i = 1; i <= params.maxTriggerNumber; i++) {
         // InPrice
         if (i === 1) {
