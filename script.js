@@ -720,6 +720,11 @@ function updateGridStepVisualWithTableData(tableData) {
         // Вычисляем длину линии (пропорционально Grid Step, максимум 10%)
         const lineWidth = Math.min(containerWidth * 0.9, (gridStepPercent / 10) * containerWidth * 0.9);
         
+        // Вычисляем толщину линии пропорционально Grid Step %
+        const baseThickness = 2; // Базовая толщина в пикселях
+        const maxGridStep = Math.max(...tableData.map(row => row.gridStepPercent));
+        const lineThickness = Math.max(1, Math.min(8, (gridStepPercent / maxGridStep) * baseThickness * 4));
+        
         // Создаем линию
         const line = document.createElement('div');
         line.className = 'grid-step-line';
@@ -727,9 +732,9 @@ function updateGridStepVisualWithTableData(tableData) {
         line.style.left = `${20}px`; // Отступ от левого края
         line.style.width = `${lineWidth}px`;
         line.style.position = 'absolute';
-        line.style.height = '2px';
+        line.style.height = `${lineThickness}px`;
         line.style.background = '#2ecc71';
-        line.style.borderRadius = '1px';
+        line.style.borderRadius = `${lineThickness / 2}px`;
         
         container.appendChild(line);
     }
