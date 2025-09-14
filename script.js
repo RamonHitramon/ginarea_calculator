@@ -6,6 +6,7 @@ let pairData = {}; // Общий объект для всех пар
 let bybtPairs = {}; // Отдельный объект для BYBT пар
 let okxPairs = {}; // Отдельный объект для OKX пар
 let bmexPairs = {}; // Отдельный объект для BMEX пар
+let marketsData = {}; // Данные из markets.json
 let chartInstances = {
     chart1: null,
     chart2: null,
@@ -35,10 +36,11 @@ async function loadPairData() {
         console.log('Пытаемся загрузить файлы пар по биржам...');
         
         // Пытаемся загрузить из отдельных файлов по биржам
-        const [okxResponse, bybtResponse, bmexResponse] = await Promise.allSettled([
+        const [okxResponse, bybtResponse, bmexResponse, marketsResponse] = await Promise.allSettled([
             fetch('pairs-okx.json'),
             fetch('pairs-bybt.json'),
-            fetch('pairs-bmex.json')
+            fetch('pairs-bmex.json'),
+            fetch('markets.json')
         ]);
         
         // Инициализируем отдельные объекты для каждой биржи
@@ -114,6 +116,21 @@ async function loadPairData() {
             console.log(`Загружено ${Object.keys(bmexData).length} пар BMEX`);
         } else {
             console.log('Ошибка загрузки BMEX:', bmexResponse.status, bmexResponse.reason);
+        }
+        
+        // Загружаем данные из markets.json
+        if (marketsResponse.status === 'fulfilled' && marketsResponse.value.ok) {
+            const marketsArray = await marketsResponse.value.json();
+            console.log('Markets data loaded:', marketsArray.length, 'markets');
+            
+            // Преобразуем массив в объект для быстрого поиска по коду
+            marketsData = {};
+            marketsArray.forEach(market => {
+                marketsData[market.code] = market;
+            });
+            console.log(`Загружено ${Object.keys(marketsData).length} рынков из markets.json`);
+        } else {
+            console.log('Ошибка загрузки markets.json:', marketsResponse.status, marketsResponse.reason);
         }
         
         // Если не удалось загрузить файлы, используем встроенные данные
@@ -983,6 +1000,19 @@ function getPairInfo(pairName, exchange) {
     return null;
 }
 
+// Получение quantityIncrement из markets.json по коду пары
+function getQuantityIncrement(pairName) {
+    if (!pairName || !marketsData[pairName]) {
+        console.log(`QuantityIncrement not found for pair: ${pairName}, using default: 0.0001`);
+        // Возвращаем значение по умолчанию, если пара не найдена
+        return 0.0001;
+    }
+    
+    const quantityIncrement = marketsData[pairName].quantityIncrement || 0.0001;
+    console.log(`QuantityIncrement for ${pairName}: ${quantityIncrement}`);
+    return quantityIncrement;
+}
+
 // Получение полного названия пары по вводу пользователя
 function getFullPairName(pairInput, exchange) {
     if (!pairInput || !exchange) return null;
@@ -1089,6 +1119,9 @@ function calculateTable(params) {
     // Получаем Min Order Size для пары
     const minOrderSize = getPairInfo(params.pair, params.exchange)?.minOrderSize || 0.1;
     
+    // Получаем Quantity Increment из markets.json
+    const quantityIncrement = getQuantityIncrement(params.pair);
+    
     for (let i = 1; i <= params.maxTriggerNumber; i++) {
         // InPrice
         if (i === 1) {
@@ -1128,25 +1161,27 @@ function calculateTable(params) {
 
             rawSize = previousRawSize * orderSizeRatio;
             
-            // Order Size: округляем вниз до ближайшего кратного Min Order Size
+            // Order Size: округляем вниз до ближайшего кратного Quantity Increment
             let roundedSize;
             if (params.maxOrderSize === null || params.maxOrderSize === "") {
-                // Если Max Order Size пустой - округлить вниз до кратного Min Order Size
-                roundedSize = Math.floor(rawSize / minOrderSize) * minOrderSize;
+                // Если Max Order Size пустой - округлить вниз до кратного Quantity Increment
+                roundedSize = Math.floor(rawSize / quantityIncrement) * quantityIncrement;
             } else if (rawSize < params.maxOrderSize) {
-                // Если rawSize меньше Max Order Size - округлить вниз до кратного Min Order Size
-                roundedSize = Math.floor(rawSize / minOrderSize) * minOrderSize;
+                // Если rawSize меньше Max Order Size - округлить вниз до кратного Quantity Increment
+                roundedSize = Math.floor(rawSize / quantityIncrement) * quantityIncrement;
             } else {
                 // Если rawSize больше или равен Max Order Size - использовать Max Order Size
-                // Но также убеждаемся, что Max Order Size кратен Min Order Size
-                const maxOrderSizeRounded = Math.floor(params.maxOrderSize / minOrderSize) * minOrderSize;
+                // Но также убеждаемся, что Max Order Size кратен Quantity Increment
+                const maxOrderSizeRounded = Math.floor(params.maxOrderSize / quantityIncrement) * quantityIncrement;
                 roundedSize = maxOrderSizeRounded;
             }
             
             // Order Size не может быть меньше заданного пользователем И не меньше Min Order Size
+            // Но финальный размер должен быть кратен Quantity Increment
             const minAllowedSize = Math.max(params.orderSize, minOrderSize);
             if (roundedSize < minAllowedSize) {
-                currentOrderSize = minAllowedSize;
+                // Округляем minAllowedSize до кратного Quantity Increment
+                currentOrderSize = Math.ceil(minAllowedSize / quantityIncrement) * quantityIncrement;
             } else {
                 currentOrderSize = roundedSize;
             }
