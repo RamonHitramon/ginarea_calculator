@@ -1,11 +1,37 @@
 // Глобальные переменные
 let currentDirection = 'long';
 
+// Цвета темы (берутся из CSS-переменных, синхронизированы с styles.css)
+const THEME = {
+    primary: '#46c280',
+    primaryDark: '#5cd494',
+    negative: '#ff7070',
+    warn: '#f0b952',
+    text: '#dce4e0',
+    textGray: '#a0aca8',
+    border: '#28302e',
+    bgCard: '#181e1e'
+};
+
+// Глобальная настройка Chart.js под тёмную тему
+function setupChartTheme() {
+    if (typeof Chart === 'undefined') return;
+    Chart.defaults.color = THEME.textGray;
+    Chart.defaults.borderColor = THEME.border;
+    Chart.defaults.font.family = 'Inter, sans-serif';
+    Chart.defaults.plugins.tooltip.backgroundColor = THEME.bgCard;
+    Chart.defaults.plugins.tooltip.titleColor = THEME.text;
+    Chart.defaults.plugins.tooltip.bodyColor = THEME.text;
+    Chart.defaults.plugins.tooltip.borderColor = THEME.border;
+    Chart.defaults.plugins.tooltip.borderWidth = 1;
+}
+
 let charts = {};
 let pairData = {}; // Общий объект для всех пар
 let bybtPairs = {}; // Отдельный объект для BYBT пар
 let okxPairs = {}; // Отдельный объект для OKX пар
 let bmexPairs = {}; // Отдельный объект для BMEX пар
+let kucnPairs = {}; // Отдельный объект для KuCoin (KUCN) пар
 let marketsData = {}; // Данные из markets.json
 let chartInstances = {
     chart1: null,
@@ -17,6 +43,7 @@ let chartInstances = {
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
+    setupChartTheme();
     loadPairData();
     updateCalculatedValues();
     setupEventListeners();
@@ -36,17 +63,19 @@ async function loadPairData() {
         console.log('Пытаемся загрузить файлы пар по биржам...');
         
         // Пытаемся загрузить из отдельных файлов по биржам
-        const [okxResponse, bybtResponse, bmexResponse, marketsResponse] = await Promise.allSettled([
+        const [okxResponse, bybtResponse, bmexResponse, kucnResponse, marketsResponse] = await Promise.allSettled([
             fetch('pairs-okx.json'),
             fetch('pairs-bybt.json'),
             fetch('pairs-bmex.json'),
+            fetch('pairs-kucn.json'),
             fetch('markets.json')
         ]);
-        
+
         // Инициализируем отдельные объекты для каждой биржи
         bybtPairs = {};
         okxPairs = {};
         bmexPairs = {};
+        kucnPairs = {};
         
         // Загружаем данные из CSV файла и распределяем по биржам
         try {
@@ -110,12 +139,20 @@ async function loadPairData() {
         
         if (bmexResponse.status === 'fulfilled' && bmexResponse.value.ok) {
             const bmexData = await bmexResponse.value.json();
-            
+
             // Перезаписываем BMEX пары
             bmexPairs = bmexData;
             console.log(`Загружено ${Object.keys(bmexData).length} пар BMEX`);
         } else {
             console.log('Ошибка загрузки BMEX:', bmexResponse.status, bmexResponse.reason);
+        }
+
+        if (kucnResponse.status === 'fulfilled' && kucnResponse.value.ok) {
+            const kucnData = await kucnResponse.value.json();
+            kucnPairs = kucnData;
+            console.log(`Загружено ${Object.keys(kucnData).length} пар KUCN`);
+        } else {
+            console.log('Ошибка загрузки KUCN:', kucnResponse.status, kucnResponse.reason);
         }
         
         // Загружаем данные из markets.json
@@ -467,8 +504,10 @@ function updatePairList(selectedExchange = null) {
         exchangePairs = Object.keys(okxPairs);
     } else if (selectedExchange === 'BMEX') {
         exchangePairs = Object.keys(bmexPairs);
+    } else if (selectedExchange === 'KUCN') {
+        exchangePairs = Object.keys(kucnPairs);
     }
-    
+
     // Добавляем все пары в datalist для автозаполнения
     exchangePairs.forEach(pair => {
         const option = document.createElement('option');
@@ -503,8 +542,11 @@ function filterPairs() {
             exchangePairs = Object.keys(okxPairs);
         } else if (exchange === 'BMEX') {
             exchangePairs = Object.keys(bmexPairs);
+        } else if (exchange === 'KUCN') {
+            exchangePairs = Object.keys(kucnPairs);
         }
-        
+
+
         // Показываем подходящие пары
         const matchingPairs = exchangePairs.filter(pair => 
             pair.toLowerCase().includes(inputValue)
@@ -612,7 +654,8 @@ function updateExchange() {
     const fees = {
         'OKX': 0.05,
         'BYBT': 0.1,
-        'BMEX': 0.035
+        'BMEX': 0.035,
+        'KUCN': 0.06
     };
     
     if (fees[exchange]) {
@@ -699,10 +742,10 @@ function updateGridStepVisualWithTableData(tableData) {
     xAxis.style.left = '70px';
     xAxis.style.right = '20px';
     xAxis.style.height = '30px';
-    xAxis.style.borderTop = '1px solid #ddd';
+    xAxis.style.borderTop = `1px solid ${THEME.border}`;
     xAxis.style.fontFamily = "'Inter', sans-serif";
     xAxis.style.fontSize = '11px';
-    xAxis.style.color = '#666';
+    xAxis.style.color = THEME.textGray;
     xAxis.style.display = 'flex';
     xAxis.style.alignItems = 'center';
     xAxis.style.justifyContent = 'space-between';
@@ -750,7 +793,7 @@ function updateGridStepVisualWithTableData(tableData) {
         line.style.width = `${lineWidth}px`;
         line.style.position = 'absolute';
         line.style.height = `${lineThickness}px`;
-        line.style.background = '#2ecc71';
+        line.style.background = THEME.primary;
         line.style.borderRadius = `${lineThickness / 2}px`;
         
         container.appendChild(line);
@@ -763,10 +806,10 @@ function updateGridStepVisualWithTableData(tableData) {
     yAxis.style.top = '0';
     yAxis.style.bottom = '40px'; // Учитываем шкалу X
     yAxis.style.width = '60px';
-    yAxis.style.borderRight = '1px solid #ddd';
+    yAxis.style.borderRight = `1px solid ${THEME.border}`;
     yAxis.style.fontFamily = "'Inter', sans-serif";
     yAxis.style.fontSize = '9px';
-    yAxis.style.color = '#666';
+    yAxis.style.color = THEME.textGray;
     yAxis.style.paddingRight = '5px';
     container.appendChild(yAxis);
     
@@ -784,7 +827,7 @@ function updateGridStepVisualWithTableData(tableData) {
         yLabel.style.top = `${yPosition - 5}px`;
         yLabel.style.right = '5px';
         yLabel.style.fontSize = '8px';
-        yLabel.style.color = '#999';
+        yLabel.style.color = THEME.textGray;
         yAxis.appendChild(yLabel);
     }
     
@@ -805,7 +848,7 @@ function updateGridStepVisualWithTableData(tableData) {
         xLabel.style.position = 'absolute';
         xLabel.style.left = `${(index / 4) * containerWidth * 0.9}px`;
         xLabel.style.fontSize = '10px';
-        xLabel.style.color = '#666';
+        xLabel.style.color = THEME.textGray;
         xAxis.appendChild(xLabel);
     });
 }
@@ -958,11 +1001,11 @@ function copyToClipboard(text) {
         const button = event.target;
         const originalText = button.textContent;
         button.textContent = 'Скопировано!';
-        button.style.background = '#28a745';
-        
+        button.style.background = THEME.primaryDark;
+
         setTimeout(() => {
             button.textContent = originalText;
-            button.style.background = '#667eea';
+            button.style.background = THEME.primary;
         }, 2000);
     }).catch(function(err) {
         console.error('Ошибка при копировании: ', err);
@@ -995,8 +1038,10 @@ function getPairInfo(pairName, exchange) {
         return okxPairs[pairName];
     } else if (exchange === 'BMEX') {
         return bmexPairs[pairName];
+    } else if (exchange === 'KUCN') {
+        return kucnPairs[pairName];
     }
-    
+
     return null;
 }
 
@@ -1025,9 +1070,12 @@ function getFullPairName(pairInput, exchange) {
         exchangePairs = okxPairs;
     } else if (exchange === 'BMEX') {
         exchangePairs = bmexPairs;
+    } else if (exchange === 'KUCN') {
+        exchangePairs = kucnPairs;
     }
-    
-    const matchingPairs = Object.keys(exchangePairs).filter(pair => 
+
+    const matchingPairs = Object.keys(exchangePairs).filter(pair =>
+
         pair.toLowerCase().startsWith(pairInput.toLowerCase())
     );
     
@@ -1364,8 +1412,8 @@ function createChart1(data) {
             datasets: [{
                 label: 'Position (coin)',
                 data: chartData,
-                backgroundColor: '#2ecc71',
-                borderColor: '#2ecc71',
+                backgroundColor: THEME.primary,
+                borderColor: THEME.primary,
                 borderWidth: 1
             }]
         },
@@ -1423,16 +1471,16 @@ function createChart2(data, params) {
     
     const chartData = data.map((row, index) => {
         const positionUsdt = row.positionUsdt;
-        let backgroundColor = '#2ecc71'; // Зеленый по умолчанию
-        
+        let backgroundColor = THEME.primary; // Зеленый по умолчанию
+
         console.log(`Trigger ${index + 1}: Position=${positionUsdt}, Deposit=${deposit}, Ratio=${positionUsdt/deposit}`);
-        
+
         // Определяем цвет в зависимости от риска
         if (positionUsdt > deposit * 3) {
-            backgroundColor = '#e74c3c'; // Красный - критический риск (3x Deposit)
+            backgroundColor = THEME.negative; // Красный - критический риск (3x Deposit)
             console.log(`Trigger ${index + 1}: RED (critical risk)`);
         } else if (positionUsdt > deposit) {
-            backgroundColor = '#f39c12'; // Желтый - высокий риск (1x-3x Deposit)
+            backgroundColor = THEME.warn; // Жёлтый - высокий риск (1x-3x Deposit)
             console.log(`Trigger ${index + 1}: YELLOW (high risk)`);
         } else {
             console.log(`Trigger ${index + 1}: GREEN (safe)`);
@@ -1515,8 +1563,8 @@ function createChart3(data) {
             datasets: [{
                 label: 'Order Size (USDT)',
                 data: chartData,
-                backgroundColor: '#2ecc71',
-                borderColor: '#2ecc71',
+                backgroundColor: THEME.primary,
+                borderColor: THEME.primary,
                 borderWidth: 1
             }]
         },
@@ -1579,8 +1627,8 @@ function createChart4(data) {
             datasets: [{
                 label: 'Order Size (Coin)',
                 data: chartData,
-                backgroundColor: '#2ecc71',
-                borderColor: '#2ecc71',
+                backgroundColor: THEME.primary,
+                borderColor: THEME.primary,
                 borderWidth: 1
             }]
         },

@@ -1,0 +1,38 @@
+{
+  "DOGEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ETHUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "PEPEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 520000,
+    "minGridStep": 2e-10,
+    "currentPrice": 0
+  },
+  "SOLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "XBTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "XRPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  }
+}
