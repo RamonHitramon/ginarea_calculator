@@ -1,4 +1,10 @@
 {
+  "BTCUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
   "DOGEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -21,12 +27,6 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
-    "currentPrice": 0
-  },
-  "XBTUSDTM": {
-    "exchange": "KUCN",
-    "minOrderSize": 0.001,
-    "minGridStep": 0.2,
     "currentPrice": 0
   },
   "XRPUSDTM": {
