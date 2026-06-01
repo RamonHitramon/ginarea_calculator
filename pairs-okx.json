@@ -569,6 +569,12 @@
     "minGridStep": 2e-07,
     "currentPrice": 0
   },
+  "HOME-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "HUMA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
