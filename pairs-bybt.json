@@ -1145,6 +1145,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "HOMEUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "HUMAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,

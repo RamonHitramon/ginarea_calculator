@@ -1163,6 +1163,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SLX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "SNDK-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
