@@ -2381,6 +2381,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "USUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "VANAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.04,
