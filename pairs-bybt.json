@@ -1357,7 +1357,7 @@
   },
   "LABUSDT": {
     "exchange": "BYBT",
-    "minOrderSize": 4,
+    "minOrderSize": 1,
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
@@ -1673,12 +1673,6 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
-  "OLUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 4,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
   "ONDOUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 3,
@@ -1704,6 +1698,12 @@
     "currentPrice": 0
   },
   "OPGUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "OPNUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
     "minGridStep": 0.0002,
@@ -1929,12 +1929,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.4,
     "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
-  "REQUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 2,
-    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "RESOLVUSDT": {

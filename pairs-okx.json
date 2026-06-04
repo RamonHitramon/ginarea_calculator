@@ -685,7 +685,7 @@
   },
   "LAB-USDT-SWAP": {
     "exchange": "OKX",
-    "minOrderSize": 10,
+    "minOrderSize": 1,
     "minGridStep": 0.002,
     "currentPrice": 0
   },
