@@ -1427,6 +1427,12 @@
     "minGridStep": 0.2,
     "currentPrice": 0
   },
+  "XCU-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "XLM-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
