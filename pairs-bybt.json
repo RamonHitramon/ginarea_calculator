@@ -20,7 +20,7 @@
   "10000SATSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 200,
-    "minGridStep": 2e-07,
+    "minGridStep": 2e-08,
     "currentPrice": 0
   },
   "1000BONKUSDT": {
@@ -458,7 +458,7 @@
   "BEATUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "BELUSDT": {
@@ -500,7 +500,7 @@
   "BLENDUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BLESSUSDT": {
@@ -590,6 +590,12 @@
   "BTRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BTWUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -974,7 +980,7 @@
   "FLUIDUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.4,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "FLUXUSDT": {
@@ -1316,7 +1322,7 @@
   "KATUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "KAVAUSDT": {
@@ -1358,7 +1364,7 @@
   "LABUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "LAUSDT": {
@@ -2030,7 +2036,7 @@
   "SIGNUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "SIRENUSDT": {
