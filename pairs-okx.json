@@ -236,7 +236,7 @@
   "BIGTIME-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "BILL-USDT-SWAP": {
@@ -278,7 +278,7 @@
   "BREV-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BSB-USDT-SWAP": {
@@ -299,10 +299,16 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "CBRS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
   "CC-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "CELO-USDT-SWAP": {
@@ -668,7 +674,7 @@
   "KITE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "KSM-USDT-SWAP": {
@@ -680,7 +686,7 @@
   "LA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "LAB-USDT-SWAP": {
@@ -830,7 +836,7 @@
   "MORPHO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "MOVE-USDT-SWAP": {
@@ -878,7 +884,7 @@
   "NIGHT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "NMR-USDT-SWAP": {
@@ -1160,7 +1166,7 @@
   "SIGN-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "SKY-USDT-SWAP": {
@@ -1322,7 +1328,7 @@
   "TRX-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "TSLA-USDT-SWAP": {
@@ -1436,7 +1442,7 @@
   "XLM-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XPL-USDT-SWAP": {
@@ -1520,7 +1526,7 @@
   "ZORA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "ZRO-USDT-SWAP": {
