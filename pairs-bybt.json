@@ -2057,6 +2057,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SLXUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "SNTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 30,
@@ -2109,6 +2115,12 @@
     "exchange": "BYBT",
     "minOrderSize": 40,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SOXLUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SPACEUSDT": {
