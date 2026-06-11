@@ -251,6 +251,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BLEND-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "BLUR-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1059,6 +1065,12 @@
     "exchange": "OKX",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "QQQ-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "RAVE-USDT-SWAP": {

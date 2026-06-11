@@ -2405,6 +2405,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "VELVETUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "VETUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
