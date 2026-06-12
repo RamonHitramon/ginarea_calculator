@@ -959,6 +959,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "ORCL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "ORDER-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
