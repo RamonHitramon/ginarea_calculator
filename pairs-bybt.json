@@ -2255,12 +2255,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "TONUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.3,
-    "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
   "TOWNSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,

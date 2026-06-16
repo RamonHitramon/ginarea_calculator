@@ -113,12 +113,6 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
-  "TONUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 1,
-    "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
   "WIFUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 1,
