@@ -1307,12 +1307,6 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
-  "TON-USDT-SWAP": {
-    "exchange": "OKX",
-    "minOrderSize": 1,
-    "minGridStep": 0.002,
-    "currentPrice": 0
-  },
   "TRB-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
