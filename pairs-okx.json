@@ -308,7 +308,7 @@
   "CBRS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "CC-USDT-SWAP": {
@@ -854,7 +854,7 @@
   "MRVL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "MU-USDT-SWAP": {
@@ -909,6 +909,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "O-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "OFC-USDT-SWAP": {
@@ -1202,7 +1208,7 @@
   "SNDK-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SNX-USDT-SWAP": {
@@ -1232,7 +1238,7 @@
   "SOXL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SPACE-USDT-SWAP": {
