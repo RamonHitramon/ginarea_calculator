@@ -1097,6 +1097,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "RE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "RECALL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1191,6 +1197,12 @@
     "exchange": "OKX",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SKHYNIX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SKY-USDT-SWAP": {

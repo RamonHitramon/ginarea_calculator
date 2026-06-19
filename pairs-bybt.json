@@ -1931,6 +1931,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "REUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "REZUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
@@ -2523,12 +2529,6 @@
     "exchange": "BYBT",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
-  "XIONUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.1,
-    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XLMUSDT": {
