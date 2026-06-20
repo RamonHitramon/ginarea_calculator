@@ -233,6 +233,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "BICO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "BIGTIME-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
