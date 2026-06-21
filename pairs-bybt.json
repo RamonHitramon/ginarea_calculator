@@ -473,6 +473,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "BICOUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.4,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "BIGTIMEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 2,
