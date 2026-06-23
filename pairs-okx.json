@@ -137,6 +137,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ARX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ASTER-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
@@ -1490,7 +1496,7 @@
   "XRP-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "XTZ-USDT-SWAP": {
