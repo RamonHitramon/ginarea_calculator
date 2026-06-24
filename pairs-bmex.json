@@ -8,7 +8,7 @@
   "ADAUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "ARBUSDT": {
@@ -26,7 +26,7 @@
   "BCHUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "BNBUSDT": {
@@ -104,7 +104,7 @@
   "SOLUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "SUIUSDT": {

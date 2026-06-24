@@ -299,6 +299,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "ARXUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ASTERUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
@@ -771,6 +777,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.04,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "DEXEUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.4,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "DIAUSDT": {
@@ -1607,6 +1619,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "MUUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "MYXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2061,6 +2079,12 @@
     "exchange": "BYBT",
     "minOrderSize": 4,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "SNDKUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SNTUSDT": {
