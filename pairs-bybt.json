@@ -1079,6 +1079,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "GRAMUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.3,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "GRASSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
@@ -1755,6 +1761,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.01,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "OUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "PARTIUSDT": {

@@ -569,6 +569,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "GRAM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "GRASS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
@@ -897,6 +903,12 @@
     "exchange": "OKX",
     "minOrderSize": 1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "NES-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "NG-USDT-SWAP": {
