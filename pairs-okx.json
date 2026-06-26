@@ -620,7 +620,7 @@
   "HYPE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "ICP-USDT-SWAP": {
