@@ -317,6 +317,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "CAP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CBRS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
@@ -881,6 +887,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "MSTR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "MU-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
@@ -1202,7 +1214,7 @@
   "SATS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10000000,
-    "minGridStep": 2e-11,
+    "minGridStep": 2e-12,
     "currentPrice": 0
   },
   "SENT-USDT-SWAP": {

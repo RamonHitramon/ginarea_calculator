@@ -1271,12 +1271,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "IPUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.4,
-    "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
   "IRYSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
@@ -1551,12 +1545,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.4,
     "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "MLNUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.4,
-    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "MMTUSDT": {
@@ -2121,12 +2109,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 0.02,
-    "currentPrice": 0
-  },
-  "SOLVUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 4,
-    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "SOMIUSDT": {
