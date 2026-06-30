@@ -1109,6 +1109,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "GWEIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "HANAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
