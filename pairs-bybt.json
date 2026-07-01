@@ -629,6 +629,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "CAPUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CATIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 2,
@@ -1628,7 +1634,7 @@
   "MYXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "NAORISUSDT": {
@@ -1730,7 +1736,7 @@
   "OPNUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "OPUSDT": {
