@@ -47,12 +47,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "ENAUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 1,
-    "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
   "ETHUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 0.01,
@@ -89,18 +83,6 @@
     "minGridStep": 2e-09,
     "currentPrice": 0
   },
-  "POPCATUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 10,
-    "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
-  "PUMPUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 10,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
   "SOLUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 0.1,
@@ -113,22 +95,10 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
-  "WIFUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 1,
-    "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
   "WLDUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
-  "WLFIUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 1,
-    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XRPUSDT": {
