@@ -2639,6 +2639,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "YFIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.002,
+    "minGridStep": 2,
+    "currentPrice": 0
+  },
   "YGGUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.2,
