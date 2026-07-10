@@ -2081,6 +2081,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SKHYNIXUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.004,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "SKRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
