@@ -2087,6 +2087,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "SKLUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "SKRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
@@ -2259,12 +2265,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.5,
     "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "SWARMSUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 4,
-    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "TACUSDT": {
