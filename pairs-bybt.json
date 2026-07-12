@@ -2267,6 +2267,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SXTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "TACUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
