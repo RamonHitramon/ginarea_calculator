@@ -734,7 +734,7 @@
   "LAB-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "LAYER-USDT-SWAP": {
@@ -1064,7 +1064,7 @@
   "PI-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "PIEVERSE-USDT-SWAP": {
@@ -1251,6 +1251,12 @@
     "exchange": "OKX",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SKHY-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SKHYNIX-USDT-SWAP": {

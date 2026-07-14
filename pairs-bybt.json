@@ -395,6 +395,12 @@
     "minGridStep": 2e-07,
     "currentPrice": 0
   },
+  "BABAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "BABYUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,
@@ -1383,12 +1389,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.5,
     "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "KORUUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.04,
-    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "KSMUSDT": {
