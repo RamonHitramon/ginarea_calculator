@@ -1091,6 +1091,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "GOOGLUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "GPSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
