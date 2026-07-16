@@ -1397,6 +1397,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "KORUUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "KSMUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.03,
@@ -2096,6 +2102,12 @@
   "SKHYNIXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.004,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "SKHYUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
     "minGridStep": 0.02,
     "currentPrice": 0
   },

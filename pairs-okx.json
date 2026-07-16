@@ -1289,6 +1289,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "SNXX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "SOL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
