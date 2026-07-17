@@ -1202,7 +1202,7 @@
   "SAHARA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "SAMSUNG-USDT-SWAP": {
@@ -1400,7 +1400,7 @@
   "TRIA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "TRUMP-USDT-SWAP": {
