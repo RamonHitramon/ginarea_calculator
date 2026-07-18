@@ -1412,7 +1412,7 @@
   "LABUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "LAUSDT": {
