@@ -620,7 +620,7 @@
   "HOME-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "HUMA-USDT-SWAP": {
@@ -777,12 +777,6 @@
     "exchange": "OKX",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
-    "currentPrice": 0
-  },
-  "LRC-USDT-SWAP": {
-    "exchange": "OKX",
-    "minOrderSize": 10,
-    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "LTC-USDT-SWAP": {
@@ -1610,7 +1604,7 @@
   "ZK-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "ZKP-USDT-SWAP": {

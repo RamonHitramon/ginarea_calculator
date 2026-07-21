@@ -1169,12 +1169,6 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
-  "HIGHUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.3,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
   "HIVEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
@@ -2547,12 +2541,6 @@
     "exchange": "BYBT",
     "minOrderSize": 4,
     "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "WHITEWHALEUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 40,
-    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "WIFUSDT": {
