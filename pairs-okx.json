@@ -983,6 +983,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "ONE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "ONT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
