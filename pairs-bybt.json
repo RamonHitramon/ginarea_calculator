@@ -653,6 +653,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CBRSUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "CCUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
@@ -2145,6 +2151,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.3,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "SNXXUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SOLAYERUSDT": {

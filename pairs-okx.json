@@ -575,6 +575,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "GOOGL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "GPS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
