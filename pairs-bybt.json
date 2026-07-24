@@ -1271,6 +1271,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "INTCUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "INUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 20,
