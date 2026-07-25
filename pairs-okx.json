@@ -968,7 +968,7 @@
   "OFC-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "OKB-USDT-SWAP": {
