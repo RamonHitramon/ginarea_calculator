@@ -47,6 +47,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "AEON-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "AERO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,

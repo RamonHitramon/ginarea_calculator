@@ -557,12 +557,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "BOBBOBUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 40,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
   "BOMEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 200,
@@ -1071,12 +1065,6 @@
     "exchange": "BYBT",
     "minOrderSize": 4,
     "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
-  "GIGAUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 40,
-    "minGridStep": 2e-07,
     "currentPrice": 0
   },
   "GIGGLEUSDT": {
@@ -2409,12 +2397,6 @@
     "exchange": "BYBT",
     "minOrderSize": 3,
     "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "TSTBSCUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 4,
-    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "TURTLEUSDT": {
