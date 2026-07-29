@@ -1331,6 +1331,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "SOXS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "SPACE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
