@@ -611,6 +611,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "GRVT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "H-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
@@ -890,7 +896,7 @@
   "MOVE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "MRVL-USDT-SWAP": {

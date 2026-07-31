@@ -2207,6 +2207,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "SOXSUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "SPACEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 40,

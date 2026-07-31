@@ -1,10 +1,4 @@
 {
-  "AAVEUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 0.1,
-    "minGridStep": 0.02,
-    "currentPrice": 0
-  },
   "ADAUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 10,
@@ -15,12 +9,6 @@
     "exchange": "BMEX",
     "minOrderSize": 0.1,
     "minGridStep": 0.0002,
-    "currentPrice": 0
-  },
-  "AVAXUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 0.1,
-    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "BCHUSDT": {
@@ -56,12 +44,6 @@
   "HYPEUSDT": {
     "exchange": "BMEX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
-    "currentPrice": 0
-  },
-  "LINKUSDT": {
-    "exchange": "BMEX",
-    "minOrderSize": 1,
     "minGridStep": 0.002,
     "currentPrice": 0
   },
