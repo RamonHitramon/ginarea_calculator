@@ -17,6 +17,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "AAOI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "AAPL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
