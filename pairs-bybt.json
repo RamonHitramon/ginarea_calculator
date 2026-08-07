@@ -653,6 +653,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CASHCATUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 40,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CATIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 2,
