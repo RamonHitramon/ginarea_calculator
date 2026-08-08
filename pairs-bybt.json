@@ -95,6 +95,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "AAOIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.04,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "AAPLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.04,
@@ -933,6 +939,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.2,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "EPICUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 4,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ERAUSDT": {
