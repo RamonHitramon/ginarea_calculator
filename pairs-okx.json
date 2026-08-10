@@ -247,7 +247,7 @@
   },
   "BEAT-USDT-SWAP": {
     "exchange": "OKX",
-    "minOrderSize": 10,
+    "minOrderSize": 1,
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
@@ -927,6 +927,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "MUBARAK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "NEAR-USDT-SWAP": {
