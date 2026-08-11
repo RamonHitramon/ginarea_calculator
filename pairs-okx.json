@@ -443,6 +443,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "DOS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DOT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
@@ -1514,7 +1520,7 @@
   "VANA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "VIRTUAL-USDT-SWAP": {
