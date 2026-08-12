@@ -749,6 +749,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "KO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "KORU-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
@@ -807,6 +813,12 @@
     "exchange": "OKX",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "LITE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "LPT-USDT-SWAP": {
