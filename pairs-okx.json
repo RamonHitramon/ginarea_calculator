@@ -953,6 +953,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "NBIS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "NEAR-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
