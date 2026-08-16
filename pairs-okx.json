@@ -1553,6 +1553,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "WAL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "WCT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
