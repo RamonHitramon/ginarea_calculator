@@ -776,7 +776,7 @@
   "LAB-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "LAYER-USDT-SWAP": {
@@ -1046,7 +1046,7 @@
   "ONE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-06,
+    "minGridStep": 2e-07,
     "currentPrice": 0
   },
   "ONT-USDT-SWAP": {
