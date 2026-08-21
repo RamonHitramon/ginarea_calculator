@@ -494,7 +494,7 @@
   "BEATUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
-    "minGridStep": 0.002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BELUSDT": {
