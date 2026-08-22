@@ -1223,12 +1223,6 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
-  "HFTUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 2,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
   "HIVEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 4,
@@ -2576,12 +2570,6 @@
   "VETUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
-  "VINEUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 2,
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
