@@ -1739,6 +1739,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "NESAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "NIGHTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
