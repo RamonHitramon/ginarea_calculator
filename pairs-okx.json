@@ -320,7 +320,7 @@
   "BSB-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BTC-USDT-SWAP": {
@@ -1565,6 +1565,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "VVV-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "W-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
@@ -1689,6 +1695,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "ZHIPU-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "ZIL-USDT-SWAP": {
