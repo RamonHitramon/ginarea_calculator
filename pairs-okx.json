@@ -749,6 +749,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "KMNO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "KO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
@@ -965,6 +971,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "MVLL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "NBIS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
@@ -1038,6 +1050,12 @@
     "currentPrice": 0
   },
   "OKB-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "OKTA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
@@ -1191,6 +1209,12 @@
     "exchange": "OKX",
     "minOrderSize": 1000,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "PURR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "PYTH-USDT-SWAP": {
