@@ -719,6 +719,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CHILLGUYUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "CHIPUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -1721,6 +1727,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "MVLLUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "MYXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -1754,6 +1766,12 @@
   "NILUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "NIULAIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },

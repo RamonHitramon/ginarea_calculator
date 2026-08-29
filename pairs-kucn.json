@@ -11,6 +11,12 @@
     "minGridStep": 2e-08,
     "currentPrice": 0
   },
+  "BASUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "BICOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -26,6 +32,12 @@
   "BTRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "CHIPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -60,6 +72,18 @@
     "currentPrice": 0
   },
   "HEMIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "LIGHTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "LONGXIAUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
