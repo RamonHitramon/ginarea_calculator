@@ -881,6 +881,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "DOSUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DOTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
