@@ -143,12 +143,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "ACXUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 1,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
   "ADAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,

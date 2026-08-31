@@ -5,6 +5,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "AEVOUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "AKEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10000,
@@ -125,6 +131,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "SKRUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "SOLUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
@@ -149,6 +161,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "USELESSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "VETUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -165,6 +183,24 @@
     "exchange": "KUCN",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "ZKCUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZKPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZORAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   }
 }
