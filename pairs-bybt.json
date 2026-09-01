@@ -1979,6 +1979,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "PONSUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "POPCATUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,

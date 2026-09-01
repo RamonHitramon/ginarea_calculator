@@ -1,4 +1,10 @@
 {
+  "0GUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "4USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -59,10 +65,22 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CYSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DOGEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "DOGSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-08,
     "currentPrice": 0
   },
   "EDENUSDTM": {
@@ -81,6 +99,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "FLOCKUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "GIGGLEUSDTM": {
@@ -119,6 +143,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "NIULAIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "PEPEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 520000,
@@ -147,6 +177,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "TNSRUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "TRUMPUSDTM": {
