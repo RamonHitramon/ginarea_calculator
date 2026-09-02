@@ -11,6 +11,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ACEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "AEVOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -21,6 +27,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10000,
     "minGridStep": 2e-08,
+    "currentPrice": 0
+  },
+  "ARBUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BASUSDTM": {
@@ -101,6 +113,18 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "FFUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "FILUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "FLOCKUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -137,6 +161,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "MARSCOINUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "MOVRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
@@ -159,6 +189,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "PUMPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "SKRUSDTM": {
