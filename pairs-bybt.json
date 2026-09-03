@@ -1163,6 +1163,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "GPROUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "GPSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2174,6 +2180,12 @@
   "SAPIENUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "SCRTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },

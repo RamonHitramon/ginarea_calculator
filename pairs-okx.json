@@ -191,6 +191,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "AVGO-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "AVNT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
@@ -407,6 +413,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CRCL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
@@ -432,6 +444,12 @@
     "currentPrice": 0
   },
   "DASH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "DELL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
