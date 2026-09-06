@@ -785,6 +785,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CPUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CROSSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -1305,6 +1311,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "ICXUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "IDUSDT": {
@@ -2189,12 +2201,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "SCRTUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.1,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
   "SEIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2841,6 +2847,12 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZESTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ZETAUSDT": {
