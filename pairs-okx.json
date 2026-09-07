@@ -743,6 +743,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "IOST-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
   "IOTA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1680,6 +1686,12 @@
     "currentPrice": 0
   },
   "WLFI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "WOO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
