@@ -65,6 +65,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CASHCATUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CHIPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -95,6 +101,12 @@
     "minGridStep": 2e-08,
     "currentPrice": 0
   },
+  "DOTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "EDENUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -111,6 +123,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "FETUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "FFUSDTM": {
@@ -138,6 +156,12 @@
     "currentPrice": 0
   },
   "HEMIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "KASUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
@@ -185,6 +209,12 @@
     "minGridStep": 2e-10,
     "currentPrice": 0
   },
+  "PIEVERSEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "PONSUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -201,6 +231,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1000,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "RAYUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "SKRUSDTM": {
@@ -257,10 +293,22 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "XANUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "XRPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "XVGUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "ZECUSDTM": {

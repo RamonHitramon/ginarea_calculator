@@ -401,6 +401,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "CNPY-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "COAI-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,

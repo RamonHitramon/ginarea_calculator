@@ -707,6 +707,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "CFGUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "CFXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -1223,6 +1229,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "HAJIMIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "HANAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -1365,6 +1377,12 @@
     "exchange": "BYBT",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "IOSTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-07,
     "currentPrice": 0
   },
   "IOTAUSDT": {
