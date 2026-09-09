@@ -83,6 +83,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CYSUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -251,6 +257,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "SOPHUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "TACUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -291,6 +303,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "VVVUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "XANUSDTM": {
