@@ -14,7 +14,7 @@
   "ACEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "AEVOUSDTM": {
@@ -83,6 +83,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "COTIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -93,6 +99,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "DASHUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "DOGEUSDTM": {
@@ -110,7 +122,7 @@
   "DOTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "EDENUSDTM": {
@@ -333,6 +345,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "ZENUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "ZKCUSDTM": {

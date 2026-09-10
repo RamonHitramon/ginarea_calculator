@@ -95,6 +95,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "4STOCKUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "4USDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
