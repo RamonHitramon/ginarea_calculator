@@ -137,6 +137,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ETHFIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ETHUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.01,
@@ -213,6 +219,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "NESUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "NIULAIUSDTM": {
