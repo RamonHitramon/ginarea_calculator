@@ -2111,6 +2111,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "PUNDIXUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "PYTHUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,

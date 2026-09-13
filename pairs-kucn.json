@@ -275,6 +275,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "RAVEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "RAYUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,

@@ -599,6 +599,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "FLOCK-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "FLOKI-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100000,
