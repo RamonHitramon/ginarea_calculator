@@ -641,6 +641,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "GLM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "GMT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,

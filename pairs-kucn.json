@@ -65,6 +65,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BTWUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "CASHCATUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -92,6 +98,12 @@
   "CPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "CVCUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -263,6 +275,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "POWERUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "PROMUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
@@ -287,6 +305,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "REZUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "RIVERUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -309,6 +333,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "STEEMUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "TACUSDTM": {

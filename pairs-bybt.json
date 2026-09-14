@@ -2429,6 +2429,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "STEEMUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "STGUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
