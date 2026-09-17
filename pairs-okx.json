@@ -89,6 +89,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "AKE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "ALGO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -465,6 +471,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "DGAI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "DOGE-USDT-SWAP": {

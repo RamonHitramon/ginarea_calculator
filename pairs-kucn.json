@@ -341,6 +341,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "SAMSUNGEMUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "SKRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
