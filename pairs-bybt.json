@@ -383,6 +383,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "AVAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "AVAXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
