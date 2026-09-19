@@ -266,7 +266,7 @@
   "BEAT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BERA-USDT-SWAP": {
@@ -614,7 +614,7 @@
   "FLNC-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "FLOCK-USDT-SWAP": {
@@ -680,7 +680,7 @@
   "GPRO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "GPS-USDT-SWAP": {
@@ -1364,7 +1364,7 @@
   "ROBO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "RVN-USDT-SWAP": {
@@ -1442,7 +1442,7 @@
   "SKHYNIX-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.001,
-    "minGridStep": 0.02,
+    "minGridStep": 0.2,
     "currentPrice": 0
   },
   "SKY-USDT-SWAP": {
@@ -1460,7 +1460,7 @@
   "SNDK-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.02,
+    "minGridStep": 0.2,
     "currentPrice": 0
   },
   "SNX-USDT-SWAP": {

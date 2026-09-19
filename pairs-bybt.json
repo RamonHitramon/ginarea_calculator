@@ -1343,12 +1343,6 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
-  "ICXUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 1,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
   "IDUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
