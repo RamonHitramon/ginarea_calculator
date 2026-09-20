@@ -47,7 +47,19 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "ARUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "AVAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "B2USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
@@ -299,6 +311,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "MUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "MYXUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -483,6 +501,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "ZAMAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "ZECUSDTM": {
