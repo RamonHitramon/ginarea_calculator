@@ -587,6 +587,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "ETHW-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "EWY-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
@@ -1809,6 +1815,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "ZETA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "ZHIPU-USDT-SWAP": {
