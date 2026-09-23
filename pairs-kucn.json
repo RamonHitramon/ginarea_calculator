@@ -83,6 +83,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "BCHUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "BEATUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -227,6 +233,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "FARTCOINUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "FETUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -249,6 +261,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "FOLKSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "FUSDTM": {
@@ -323,10 +341,22 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "MINAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "MOVRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "MUBARAKUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "MUSDTM": {
@@ -515,6 +545,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "UNIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "USELESSUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -531,6 +567,18 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "WIFUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "WLDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "XANUSDTM": {
