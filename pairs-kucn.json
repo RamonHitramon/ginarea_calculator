@@ -5,6 +5,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "1000BONKUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "4USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -251,6 +257,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "FHEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "FILUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
@@ -380,6 +392,12 @@
   "NESUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "NILUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -515,6 +533,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "TAKEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "TNSRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -639,6 +663,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "ZROUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   }
 }
