@@ -461,6 +461,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "CYPH-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DASH-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
@@ -614,6 +620,12 @@
   "FARTCOIN-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "FET-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
     "minGridStep": 0.0002,
     "currentPrice": 0
   },

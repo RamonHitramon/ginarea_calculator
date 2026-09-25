@@ -893,6 +893,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "DATAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DEXEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
