@@ -2153,6 +2153,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "QNTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "QUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,

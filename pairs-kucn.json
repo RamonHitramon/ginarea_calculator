@@ -119,6 +119,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "BROCCOLI714USDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "BRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -317,6 +323,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "HANMIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "HEMIUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -357,6 +369,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "LYNUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "MAGMAUSDTM": {
@@ -497,6 +515,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "QNTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "RAVEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -555,6 +579,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "SUIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "SUSDTM": {
@@ -645,6 +675,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "XPLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XRPUSDTM": {

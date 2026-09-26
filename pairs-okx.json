@@ -845,6 +845,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "KII-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "KITE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1431,6 +1437,12 @@
     "exchange": "OKX",
     "minOrderSize": 10000000,
     "minGridStep": 2e-12,
+    "currentPrice": 0
+  },
+  "SEI-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "SENT-USDT-SWAP": {
