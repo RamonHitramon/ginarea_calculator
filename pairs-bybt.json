@@ -1529,6 +1529,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "KMNOUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "KNCUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,

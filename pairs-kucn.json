@@ -83,6 +83,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "AVNTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "B2USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -377,6 +383,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "LYTEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "MAGMAUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -521,6 +533,18 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "QUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "RAREUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "RAVEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -567,6 +591,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "SOONUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "SOPHUSDTM": {
