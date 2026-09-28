@@ -2483,6 +2483,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "STONKUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "STORJUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,

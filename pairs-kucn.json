@@ -53,6 +53,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "APTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ARBUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -197,6 +203,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CRVUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "CVCUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -323,6 +335,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "GRAMUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "GUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -350,6 +368,12 @@
   "IRYSUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "JASMYUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
@@ -479,6 +503,18 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "PDDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "PENGUUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "PEPEUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 520000,
@@ -579,6 +615,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.001,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "SEIUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "SKRUSDTM": {

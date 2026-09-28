@@ -779,6 +779,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "IMX-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "INIT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
