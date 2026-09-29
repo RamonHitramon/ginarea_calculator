@@ -1523,6 +1523,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "KIIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "KITEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2853,6 +2859,12 @@
     "exchange": "BYBT",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "XDCUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XLMUSDT": {

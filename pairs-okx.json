@@ -815,6 +815,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "IRYS-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "JELLYJELLY-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
@@ -1785,6 +1791,12 @@
     "exchange": "OKX",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "XDP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XLM-USDT-SWAP": {
