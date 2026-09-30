@@ -215,6 +215,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "CSOPSAMSUNG2LUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "CVCUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -389,6 +395,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ICNTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "IOTAUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -423,6 +435,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "LITUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "LONGXIAUSDTM": {
@@ -809,6 +827,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "XLMUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "XPLUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -843,6 +867,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "ZEREBROUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "ZETAUSDTM": {
