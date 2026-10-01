@@ -1835,6 +1835,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "MUUUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "MVLLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
@@ -2864,6 +2870,12 @@
   "XDCUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "XDPUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },

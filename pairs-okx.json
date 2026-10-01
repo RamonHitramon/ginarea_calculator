@@ -455,6 +455,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "CT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "CVX-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
@@ -1089,6 +1095,12 @@
     "exchange": "OKX",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "MUU-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "MVLL-USDT-SWAP": {
