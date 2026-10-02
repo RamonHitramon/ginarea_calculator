@@ -53,6 +53,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ALICEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ALLOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -224,6 +230,12 @@
   "CSOPSAMSUNG2LUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "CSOPSKHYNIX2LUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
     "minGridStep": 0.002,
     "currentPrice": 0
   },

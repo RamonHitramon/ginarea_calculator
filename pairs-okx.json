@@ -1367,6 +1367,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "QUANT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.2,
+    "currentPrice": 0
+  },
   "RAVE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,

@@ -857,6 +857,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "CUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
