@@ -11,6 +11,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "2U2USDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "4USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -311,6 +317,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "EVAAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "FARTCOINUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -359,6 +371,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "GALAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "GENIUSUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -387,6 +405,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "GTCUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "GUSDTM": {
@@ -677,6 +701,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "RESOLVUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "REZUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -699,6 +729,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.001,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "SANDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "SEIUSDTM": {
