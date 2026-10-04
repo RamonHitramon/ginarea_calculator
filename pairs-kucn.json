@@ -305,6 +305,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ENJUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "ETHFIUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -849,6 +855,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "VELVETUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "VETUSDTM": {

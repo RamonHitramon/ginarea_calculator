@@ -2465,6 +2465,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SPORTFUNUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "SPXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
