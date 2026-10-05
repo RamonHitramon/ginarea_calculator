@@ -665,6 +665,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "PROSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "PTBUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -782,6 +788,12 @@
   "STEEMUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "STRKUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
