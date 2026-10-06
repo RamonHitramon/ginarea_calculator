@@ -29,6 +29,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "AEONUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "AEVOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -297,6 +303,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "EIGENUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ENAUSDTM": {
@@ -783,6 +795,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SOXSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "STEEMUSDTM": {

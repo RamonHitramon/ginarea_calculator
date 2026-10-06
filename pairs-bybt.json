@@ -2363,6 +2363,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SKYUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "SLXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
