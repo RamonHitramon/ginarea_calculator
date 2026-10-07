@@ -77,6 +77,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "API3USDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "APTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
@@ -627,6 +633,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "ORCAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "PDDUSDTM": {
