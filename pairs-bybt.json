@@ -2039,6 +2039,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "PENGSTOCKUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "PENGUUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,

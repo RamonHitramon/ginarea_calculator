@@ -197,6 +197,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "BWETUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.001,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "CAPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -609,6 +615,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "NKEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "NMRUSDTM": {
