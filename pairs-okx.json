@@ -1481,6 +1481,12 @@
     "minGridStep": 2e-12,
     "currentPrice": 0
   },
+  "SECZ-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "SEI-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,

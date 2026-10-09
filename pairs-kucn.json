@@ -497,6 +497,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "JUPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "KASUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -633,6 +639,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "OGNUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "ONDOUSDTM": {
@@ -861,6 +873,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "TIAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "TNSRUSDTM": {
