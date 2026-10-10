@@ -2321,6 +2321,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SECZUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.5,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "SEIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,

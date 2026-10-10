@@ -497,10 +497,22 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "JCTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
   "JUPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "KAIAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "KASUSDTM": {
@@ -543,6 +555,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "MAGICUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "MAGMAUSDTM": {
@@ -803,6 +821,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SKLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "SKRUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -977,6 +1001,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "XDPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "XLMUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -1038,6 +1068,12 @@
     "currentPrice": 0
   },
   "ZKPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZKUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
