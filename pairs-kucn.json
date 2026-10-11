@@ -221,6 +221,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "CFXUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "CHIPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -332,6 +338,12 @@
   "ENJUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ERAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },

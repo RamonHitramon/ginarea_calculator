@@ -1643,6 +1643,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "LUMIAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "LUNA2USDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
@@ -2522,12 +2528,6 @@
   "STEEMUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "STGUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 0.1,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
