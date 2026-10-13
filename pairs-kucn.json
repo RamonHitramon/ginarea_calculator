@@ -233,6 +233,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CKBUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "CLOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -309,6 +315,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1000,
     "minGridStep": 2e-08,
+    "currentPrice": 0
+  },
+  "DOSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "DOTUSDTM": {
@@ -491,6 +503,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "INJUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "IOTAUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -531,6 +549,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "KGENUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "LABUSDTM": {
@@ -791,6 +815,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "RENDERUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "RESOLVUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -807,6 +837,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "RSRUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "SAGAUSDTM": {
@@ -999,6 +1035,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "WUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "XANUSDTM": {

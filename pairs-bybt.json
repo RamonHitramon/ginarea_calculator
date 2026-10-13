@@ -500,7 +500,7 @@
   "BCHUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "BEAMUSDT": {
@@ -590,7 +590,7 @@
   "BNBUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "BNCUSDT": {
@@ -680,7 +680,7 @@
   "CAKEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "CAPUSDT": {
@@ -1358,7 +1358,7 @@
   "HYPEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "ICNTUSDT": {
@@ -1568,7 +1568,7 @@
   "LABUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "LAOPUUSDT": {
@@ -1610,7 +1610,7 @@
   "LITUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "LONGXIAUSDT": {
@@ -1802,19 +1802,19 @@
   "MORPHOUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "MOVEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "MOVRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "MRVLUSDT": {
@@ -2030,7 +2030,7 @@
   "PAXGUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.001,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "PEAQUSDT": {
@@ -2042,7 +2042,7 @@
   "PENDLEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "PENGSTOCKUSDT": {
@@ -2291,6 +2291,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "RSRUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 10,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
   "RUNEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
@@ -2301,6 +2307,12 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SAFEUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "SAGAUSDT": {
@@ -2786,7 +2798,7 @@
   "VELVETUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "VETUSDT": {
@@ -2888,7 +2900,7 @@
   "XAUTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.001,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "XAUUSDT": {
