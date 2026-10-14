@@ -1523,6 +1523,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "SKDD-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "SKHY-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,

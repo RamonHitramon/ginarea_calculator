@@ -11,6 +11,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "1000RATSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "2U2USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -711,6 +717,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "OPUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ORCAUSDTM": {
