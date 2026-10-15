@@ -341,6 +341,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BSP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "BTC-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.0001,

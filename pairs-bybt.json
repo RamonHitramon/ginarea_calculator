@@ -641,6 +641,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BSPUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "BSVUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
@@ -897,6 +903,12 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "DEEPUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "DEXEUSDT": {
