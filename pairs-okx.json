@@ -461,6 +461,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "CSOPSKHYNIX2L-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "CT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1433,6 +1439,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "RKLB-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "RLS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
@@ -1545,6 +1557,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.001,
     "minGridStep": 0.2,
+    "currentPrice": 0
+  },
+  "SKUU-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SKY-USDT-SWAP": {

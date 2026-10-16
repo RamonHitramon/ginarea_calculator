@@ -53,6 +53,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "AGTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "AINUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -164,6 +170,12 @@
   "BICOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BLURUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -881,6 +893,18 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SIRENUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "SKDDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "SKLUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -915,6 +939,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SOXLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SOXSUSDTM": {
