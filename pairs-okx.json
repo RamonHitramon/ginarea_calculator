@@ -509,6 +509,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "DNA-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DOGE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1779,6 +1785,12 @@
     "exchange": "OKX",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "UVXY-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "VANA-USDT-SWAP": {

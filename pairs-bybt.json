@@ -923,6 +923,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "DNAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "DOGEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2165,12 +2171,6 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
-  "PROMPTUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 1,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
   "PROVEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2514,12 +2514,6 @@
     "currentPrice": 0
   },
   "SPKUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 10,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "SPORTFUNUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
