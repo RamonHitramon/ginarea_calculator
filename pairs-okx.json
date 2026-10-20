@@ -140,7 +140,7 @@
   "APR-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "APT-USDT-SWAP": {
@@ -296,7 +296,7 @@
   "BILL-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "BIO-USDT-SWAP": {
@@ -446,7 +446,7 @@
   "CP-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "CRCL-USDT-SWAP": {
@@ -1781,6 +1781,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "UNITREE-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "UP-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1962,6 +1968,12 @@
     "currentPrice": 0
   },
   "ZHIPU-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "ZHONGJI-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,

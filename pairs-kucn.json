@@ -119,6 +119,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "ARIAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "ARKUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,

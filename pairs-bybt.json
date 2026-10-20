@@ -857,6 +857,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "CTRUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "CTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 5,
@@ -1634,7 +1640,7 @@
   "LONGXIAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 5,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "LPTUSDT": {
