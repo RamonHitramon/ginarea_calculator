@@ -467,6 +467,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "CRWV-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "CSOPSKHYNIX2L-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
