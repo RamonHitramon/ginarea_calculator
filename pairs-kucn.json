@@ -191,6 +191,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BILLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "BLURUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -351,6 +357,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1000,
     "minGridStep": 2e-08,
+    "currentPrice": 0
+  },
+  "DOODUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "DOSUSDTM": {

@@ -407,6 +407,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "AXISUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "AXLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
