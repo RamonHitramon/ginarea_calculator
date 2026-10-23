@@ -533,6 +533,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "BEUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "BICOUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
@@ -1847,6 +1853,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "MRNAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "MRVLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
@@ -2859,6 +2871,12 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "WDCUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "WETUSDT": {
