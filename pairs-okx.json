@@ -326,7 +326,7 @@
   "BLUR-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "BNB-USDT-SWAP": {
@@ -908,7 +908,7 @@
   "KGEN-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "KII-USDT-SWAP": {
@@ -1412,7 +1412,7 @@
   "PURR-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "PYTH-USDT-SWAP": {
@@ -1628,7 +1628,7 @@
   "SNXX-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "SOL-USDT-SWAP": {
