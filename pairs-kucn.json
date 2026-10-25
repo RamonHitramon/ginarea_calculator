@@ -215,9 +215,21 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BLENDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "BLURUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BMTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -575,6 +587,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "INUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "IOTAUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -789,6 +807,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "ORDERUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "PDDUSDTM": {
@@ -1127,6 +1151,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "WETUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "WIFUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -1188,6 +1218,12 @@
     "currentPrice": 0
   },
   "ZAMAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ZBTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
