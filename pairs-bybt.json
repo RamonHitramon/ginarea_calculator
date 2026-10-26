@@ -71,6 +71,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "1000TAGUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "1000TOSHIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -1130,6 +1136,12 @@
   "EWYUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "EWZUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.05,
     "minGridStep": 0.02,
     "currentPrice": 0
   },
