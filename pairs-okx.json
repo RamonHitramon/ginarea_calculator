@@ -272,7 +272,7 @@
   "BCH-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "BE-USDT-SWAP": {
@@ -332,7 +332,7 @@
   "BNB-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "BOME-USDT-SWAP": {
@@ -1346,7 +1346,7 @@
   "PEPE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1000000,
-    "minGridStep": 2e-09,
+    "minGridStep": 2e-10,
     "currentPrice": 0
   },
   "PI-USDT-SWAP": {
@@ -1730,7 +1730,7 @@
   "TAO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "THETA-USDT-SWAP": {
