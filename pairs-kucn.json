@@ -221,6 +221,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "BLESSUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
   "BLURUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -578,6 +584,12 @@
   "ICNTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "INITUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
