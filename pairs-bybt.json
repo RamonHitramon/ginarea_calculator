@@ -1469,6 +1469,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "INTWUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "INUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -2249,6 +2255,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "PURRUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "PYTHUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2283,6 +2295,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "RDDTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "RECALLUSDT": {

@@ -581,9 +581,21 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "HYPEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "ICNTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "IDOLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
@@ -822,6 +834,12 @@
     "currentPrice": 0
   },
   "ORDERUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "PARTIUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
@@ -1097,6 +1115,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "TRXUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 100,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "TUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -1209,6 +1233,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "XMRUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "XPLUSDTM": {
