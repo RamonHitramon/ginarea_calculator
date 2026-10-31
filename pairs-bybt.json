@@ -251,6 +251,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "ALPINEUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ALTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -1077,12 +1083,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
-    "currentPrice": 0
-  },
-  "EPICUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 1,
-    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ERAUSDT": {
@@ -2231,12 +2231,6 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
-  "PTBUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 10,
-    "minGridStep": 2e-07,
-    "currentPrice": 0
-  },
   "PUFFERUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2675,6 +2669,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "SYRUPUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "TACUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -2721,12 +2721,6 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 2e-07,
-    "currentPrice": 0
-  },
-  "TMXUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 5,
-    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "TNSRUSDT": {

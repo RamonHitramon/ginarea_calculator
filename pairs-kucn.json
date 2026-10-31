@@ -89,6 +89,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "ALPINEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "ALTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -611,6 +617,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "INTWUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "INUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -935,6 +947,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "RECALLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "RENDERUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
@@ -1053,6 +1071,12 @@
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "SQDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "STEEMUSDTM": {
