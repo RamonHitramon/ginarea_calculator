@@ -563,6 +563,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "HANAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "HANMIUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.01,

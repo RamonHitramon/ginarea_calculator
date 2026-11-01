@@ -3017,6 +3017,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "XOMUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "XPINUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 100,
