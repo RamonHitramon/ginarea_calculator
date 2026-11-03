@@ -392,7 +392,7 @@
   "CASHCAT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "CBRS-USDT-SWAP": {
@@ -500,7 +500,7 @@
   "CT-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "CVX-USDT-SWAP": {
@@ -764,7 +764,7 @@
   "GPRO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "GPS-USDT-SWAP": {
@@ -866,7 +866,7 @@
   "INTW-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "IOST-USDT-SWAP": {
@@ -1373,6 +1373,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "PLTR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "PLUME-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1484,7 +1490,7 @@
   "RIVER-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "RKLB-USDT-SWAP": {
@@ -1739,6 +1745,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "TEM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "THETA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1910,7 +1922,7 @@
   "WOO-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "XAG-USDT-SWAP": {
@@ -1934,7 +1946,7 @@
   "XDP-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "XLM-USDT-SWAP": {
