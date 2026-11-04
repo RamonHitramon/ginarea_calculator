@@ -593,6 +593,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "HOTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-07,
+    "currentPrice": 0
+  },
   "HUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -1139,10 +1145,22 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "TRADOORUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "TRUMPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "TRUSTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "TRUTHUSDTM": {
