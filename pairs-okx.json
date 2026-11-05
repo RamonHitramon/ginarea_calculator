@@ -137,6 +137,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "APP-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "APR-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -159,6 +165,12 @@
     "exchange": "OKX",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ARM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "ARX-USDT-SWAP": {
@@ -447,6 +459,12 @@
     "exchange": "OKX",
     "minOrderSize": 0.1,
     "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
+  "COHR-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "COMP-USDT-SWAP": {
@@ -879,6 +897,12 @@
     "exchange": "OKX",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "IREN-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "IRYS-USDT-SWAP": {
@@ -1437,6 +1461,12 @@
     "exchange": "OKX",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "QCOM-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "QQQ-USDT-SWAP": {

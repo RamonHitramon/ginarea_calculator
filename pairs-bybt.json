@@ -299,6 +299,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "APPSTOCKUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "APRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -339,6 +345,12 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "ARMUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "ARPAUSDT": {
@@ -833,6 +845,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "COHRUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "COMPUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
@@ -941,6 +959,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "DDOGUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "DEEPUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -951,6 +975,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "DGAIUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 5,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "DIAUSDT": {
@@ -1511,6 +1541,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "IRENUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "IRYSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -1896,6 +1932,12 @@
     "currentPrice": 0
   },
   "MSFTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "MSTRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,
@@ -2337,6 +2379,12 @@
     "exchange": "BYBT",
     "minOrderSize": 1,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "RIOTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "RIVERUSDT": {
