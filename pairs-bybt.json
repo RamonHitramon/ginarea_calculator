@@ -899,6 +899,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "CSOPSKHYNIX2LUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.002,
+    "currentPrice": 0
+  },
   "CTCUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -2315,6 +2321,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "QQQUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "QUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -2909,6 +2921,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "UVXYUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "VANAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
@@ -3123,6 +3141,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "YPFUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.05,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "ZAMAUSDT": {
