@@ -125,6 +125,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "ANTHROPIC-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "APE-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
