@@ -65,6 +65,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "AIOTUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "AIOUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -447,6 +453,12 @@
     "exchange": "KUCN",
     "minOrderSize": 1,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "EDGEUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "EIGENUSDTM": {
@@ -897,6 +909,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "ONUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "OPUSDTM": {

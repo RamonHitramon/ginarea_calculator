@@ -980,7 +980,7 @@
   "KORU-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "KSM-USDT-SWAP": {

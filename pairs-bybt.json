@@ -2411,6 +2411,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "RKLBUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "RLCUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
