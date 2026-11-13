@@ -197,6 +197,12 @@
     "minGridStep": 0.0002,
     "currentPrice": 0
   },
+  "BARDUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "BASEDUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
@@ -686,7 +692,7 @@
   "INTWUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "INUSDTM": {
@@ -917,6 +923,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "OPGUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "OPUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -1064,7 +1076,7 @@
   "RIVERUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "RSRUSDTM": {
@@ -1130,7 +1142,7 @@
   "SNXXUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 0.1,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "SOLUSDTM": {

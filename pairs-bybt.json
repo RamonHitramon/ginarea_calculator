@@ -2009,6 +2009,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "NBISUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "NEARUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
@@ -2058,6 +2064,12 @@
     "currentPrice": 0
   },
   "NVDAUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.01,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
+  "NVDLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
     "minGridStep": 0.02,

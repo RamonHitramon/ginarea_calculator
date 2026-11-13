@@ -1265,6 +1265,12 @@
     "minGridStep": 0.02,
     "currentPrice": 0
   },
+  "NVDL-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "O-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
