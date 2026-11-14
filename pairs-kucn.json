@@ -1109,6 +1109,12 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
+  "SHELLUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "SIRENUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,

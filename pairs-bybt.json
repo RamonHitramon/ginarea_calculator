@@ -107,12 +107,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "4STOCKUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 50,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
   "4USDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
@@ -177,12 +171,6 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
-  "AGIUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 10,
-    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "AGLDUSDT": {
@@ -1385,12 +1373,6 @@
     "minGridStep": 2e-05,
     "currentPrice": 0
   },
-  "HAJIMIUSDT": {
-    "exchange": "BYBT",
-    "minOrderSize": 50,
-    "minGridStep": 2e-05,
-    "currentPrice": 0
-  },
   "HANAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
@@ -1479,6 +1461,12 @@
     "exchange": "BYBT",
     "minOrderSize": 0.1,
     "minGridStep": 0.002,
+    "currentPrice": 0
+  },
+  "IDOLUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 50,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "IDUSDT": {
@@ -2523,6 +2511,12 @@
     "exchange": "BYBT",
     "minOrderSize": 10,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "SHELLUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "SHIB1000USDT": {
