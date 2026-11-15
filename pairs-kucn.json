@@ -167,6 +167,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "ASTERUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 1,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
   "AVAUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 1,
@@ -225,6 +231,12 @@
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "BERAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "BICOUSDTM": {
@@ -741,6 +753,12 @@
     "exchange": "KUCN",
     "minOrderSize": 100,
     "minGridStep": 2e-06,
+    "currentPrice": 0
+  },
+  "KAVAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 0.1,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "KGENUSDTM": {
