@@ -272,7 +272,7 @@
   "BARD-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BASED-USDT-SWAP": {
@@ -548,7 +548,7 @@
   "DATA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "DELL-USDT-SWAP": {
@@ -848,7 +848,7 @@
   "HUMA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 100,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "HYPE-USDT-SWAP": {
