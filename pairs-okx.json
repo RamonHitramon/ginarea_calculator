@@ -236,7 +236,7 @@
   "AXIS-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "AXS-USDT-SWAP": {
@@ -308,7 +308,7 @@
   "BERA-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "BICO-USDT-SWAP": {
@@ -915,6 +915,12 @@
     "exchange": "OKX",
     "minOrderSize": 100,
     "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "JCT-USDT-SWAP": {
+    "exchange": "OKX",
+    "minOrderSize": 1000,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "JELLYJELLY-USDT-SWAP": {
