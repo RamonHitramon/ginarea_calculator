@@ -287,6 +287,12 @@
     "minGridStep": 0.002,
     "currentPrice": 0
   },
+  "BREVUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "BROCCOLI714USDTM": {
     "exchange": "KUCN",
     "minOrderSize": 100,
@@ -846,6 +852,12 @@
     "currentPrice": 0
   },
   "MINAUSDTM": {
+    "exchange": "KUCN",
+    "minOrderSize": 10,
+    "minGridStep": 2e-05,
+    "currentPrice": 0
+  },
+  "MMTUSDTM": {
     "exchange": "KUCN",
     "minOrderSize": 10,
     "minGridStep": 2e-05,
