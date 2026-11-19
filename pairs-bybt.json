@@ -2201,6 +2201,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "PHAROSUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 1,
+    "minGridStep": 0.0002,
+    "currentPrice": 0
+  },
   "PHAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
