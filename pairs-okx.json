@@ -446,7 +446,7 @@
   "CHZ-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "CL-USDT-SWAP": {
@@ -704,7 +704,7 @@
   "FARTCOIN-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "FET-USDT-SWAP": {
@@ -1565,12 +1565,6 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
-  "RVN-USDT-SWAP": {
-    "exchange": "OKX",
-    "minOrderSize": 10,
-    "minGridStep": 2e-06,
-    "currentPrice": 0
-  },
   "S-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 10,
@@ -1682,7 +1676,7 @@
   "SNDK-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.01,
-    "minGridStep": 0.2,
+    "minGridStep": 0.02,
     "currentPrice": 0
   },
   "SNX-USDT-SWAP": {
@@ -1826,7 +1820,7 @@
   "TRUMP-USDT-SWAP": {
     "exchange": "OKX",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "TRUST-USDT-SWAP": {

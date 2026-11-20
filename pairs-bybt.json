@@ -269,6 +269,12 @@
     "minGridStep": 2e-06,
     "currentPrice": 0
   },
+  "ANTUSDT": {
+    "exchange": "BYBT",
+    "minOrderSize": 0.1,
+    "minGridStep": 0.02,
+    "currentPrice": 0
+  },
   "APEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
