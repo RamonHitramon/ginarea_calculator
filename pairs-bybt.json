@@ -14,13 +14,13 @@
   "1000000MOGUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "10000NEXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "10000SATSUSDT": {
@@ -86,7 +86,7 @@
   "1000TOSHIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "1000TURBOUSDT": {
@@ -230,7 +230,7 @@
   "ALICEUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ALLOUSDT": {
@@ -302,7 +302,7 @@
   "APRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "APTUSDT": {
@@ -338,7 +338,7 @@
   "ARKUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "ARMUSDT": {
@@ -440,7 +440,7 @@
   "AXISUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 5,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "AXLUSDT": {
@@ -584,7 +584,7 @@
   "BILLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "BIOUSDT": {
@@ -674,7 +674,7 @@
   "BRUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "BSBUSDT": {
@@ -710,7 +710,7 @@
   "BTWUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "BUSDT": {
@@ -782,7 +782,7 @@
   "CFGUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "CFXUSDT": {
@@ -878,7 +878,7 @@
   "CPUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 50,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "CROSSUSDT": {
@@ -944,7 +944,7 @@
   "CVXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.0002,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "CYBERUSDT": {
@@ -956,7 +956,7 @@
   "CYSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "DASHUSDT": {
@@ -968,7 +968,7 @@
   "DATAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "DDOGUSDT": {
@@ -998,7 +998,7 @@
   "DIAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "DNAUSDT": {
@@ -1136,7 +1136,7 @@
   "ESPORTSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "ESPUSDT": {
@@ -1244,7 +1244,7 @@
   "FLUIDUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.0002,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "FLUXUSDT": {
@@ -1262,7 +1262,7 @@
   "FOLKSUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.0002,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "FORMUSDT": {
@@ -1358,7 +1358,7 @@
   "GRVTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "GUNUSDT": {
@@ -1436,7 +1436,7 @@
   "HUMAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "HUSDT": {
@@ -1514,7 +1514,7 @@
   "INTWUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "INUSDT": {
@@ -1640,7 +1640,7 @@
   "KGENUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "KIIUSDT": {
@@ -1706,7 +1706,7 @@
   "LIGHTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "LINEAUSDT": {
@@ -1736,13 +1736,13 @@
   "LPTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.0002,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "LRCUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "LSKUSDT": {
@@ -2120,7 +2120,7 @@
   "OPGUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "OPNUSDT": {
@@ -2138,7 +2138,7 @@
   "ORCAUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.0002,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "ORDERUSDT": {
@@ -2240,7 +2240,7 @@
   "PLAYSOUTUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "PLTRUSDT": {
@@ -2306,7 +2306,7 @@
   "PRLUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "PROVEUSDT": {
@@ -2396,7 +2396,7 @@
   "REDUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "RENDERUSDT": {
@@ -2432,7 +2432,7 @@
   "RIVERUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 0.002,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "RKLBUSDT": {
@@ -2450,7 +2450,7 @@
   "ROBOUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "ROSEUSDT": {
@@ -2618,7 +2618,7 @@
   "SNXXUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.01,
-    "minGridStep": 0.02,
+    "minGridStep": 0.002,
     "currentPrice": 0
   },
   "SOLAYERUSDT": {
@@ -2636,7 +2636,7 @@
   "SOMIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 0.1,
-    "minGridStep": 2e-05,
+    "minGridStep": 0.0002,
     "currentPrice": 0
   },
   "SONICUSDT": {
@@ -2720,7 +2720,7 @@
   "STONKUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 5,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "STORJUSDT": {
@@ -2918,7 +2918,7 @@
   "UAIUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 1,
-    "minGridStep": 0.0002,
+    "minGridStep": 2e-05,
     "currentPrice": 0
   },
   "UBUSDT": {
@@ -2960,7 +2960,7 @@
   "USUSDT": {
     "exchange": "BYBT",
     "minOrderSize": 10,
-    "minGridStep": 2e-05,
+    "minGridStep": 2e-06,
     "currentPrice": 0
   },
   "UVXYUSDT": {
